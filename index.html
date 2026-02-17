@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary Meta Tags -->
+  <title>PineChart — Run Pine Script Indicators & Strategies in MetaTrader 5</title>
+  <meta name="description"
+    content="PineChart lets you run Pine Script indicators and strategies directly inside MetaTrader 5. No manual conversion to MQL5 required. Modern TradingView-style charting, 294+ Pine Script functions supported.">
+  <meta name="keywords"
+    content="Pine Script MetaTrader 5, run Pine Script in MT5, Pine Script indicator in MT5, convert Pine Script to MQL5, TradingView MT5, Pine Script EA, MQL5 Pine Script, PineChart">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PineChart — Run Pine Script in MetaTrader 5">
+  <meta property="og:description"
+    content="Run your favorite Pine Script indicators and strategies directly inside MetaTrader 5 with PineChart. No manual code conversion needed.">
+  <meta property="og:image" content="logo3.1.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PineChart — Run Pine Script in MetaTrader 5">
+  <meta name="twitter:description"
+    content="Run your favorite Pine Script indicators and strategies directly inside MetaTrader 5 with PineChart. No manual code conversion needed.">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="#">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="logo3.1.png" type="image/png">
+
+  <!-- JSON-LD Structured Data: SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "PineChart",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Windows",
+    "description": "PineChart is an MQL5 Expert Advisor that runs Pine Script indicators and strategies directly inside MetaTrader 5 with a modern TradingView-style charting interface. No manual conversion from Pine Script to MQL5 required.",
+    "featureList": [
+      "Run Pine Script indicators in MetaTrader 5",
+      "Run Pine Script strategies with live trading via MQL5 CTrade",
+      "Modern TradingView-style charting interface",
+      "294+ Pine Script functions implemented (42% of full API)",
+      "37+ technical analysis functions across 6 categories",
+      "Drawing objects: line, label, box, hline with handle-based pool",
+      "Multi-indicator support: run N Pine Script indicators simultaneously",
+      "Multi-timeframe data via request.security()",
+      "Tables with 9 screen positions and auto-sized cells",
+      "User-defined types and functions",
+      "Full control flow: if/else, for, while, switch, var/varip"
+    ],
+    "softwareRequirements": "MetaTrader 5",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "url": "#",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD Structured Data: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I run Pine Script indicators in MetaTrader 5?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. PineChart is an MQL5 Expert Advisor that runs Pine Script indicators directly inside MetaTrader 5. You paste your Pine Script source file into the MT5 Files directory, type the filename in the EA input, and PineChart's built-in interpreter executes the script on every bar — no manual conversion to MQL5 is needed. It currently supports 294 out of 701 Pine Script functions (approximately 42% of the full API), including moving averages, oscillators, drawing objects, and more."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to manually convert my Pine Script to MQL5?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. PineChart includes a full Pine Script interpreter built entirely in MQL5. It has its own lexer, parser, and per-bar execution engine that reads your .txt Pine Script files at runtime. You never touch MQL5 code. Just place your Pine Script source file in the MT5 Files directory, specify the filename in the EA settings, and PineChart handles the rest — tokenizing, parsing the AST, and executing each bar with the correct Pine Script semantics."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What Pine Script functions and built-ins does PineChart support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "PineChart currently implements 294 out of 701 Pine Script v5/v6 API functions (approximately 42%). This includes: 37+ technical analysis functions (SMA, EMA, RSI, MACD, Bollinger Bands, Stochastic, SuperTrend, Parabolic SAR, DMI, and more), 30+ array functions, 16 string functions, 14 input types, full strategy order functions (entry, close, exit, cancel), drawing objects (line, label, box, hline), tables, request.security() for multi-timeframe data, user-defined types and functions, and all control flow (if/else, for, while, switch, var/varip). See the full API coverage tracker on this page for a category-by-category breakdown."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does PineChart support Pine Script strategies, not just indicators?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. PineChart supports Pine Script strategies with real order execution through MQL5's CTrade library. You can use strategy.entry(), strategy.close(), strategy.close_all(), strategy.exit(), strategy.order(), strategy.cancel(), and strategy.cancel_all(). Strategy properties like strategy.position_size, strategy.equity, strategy.netprofit, and strategy.openprofit are also available. Strategies run in MT5's Strategy Tester for backtesting and can execute live trades on a real or demo account."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is PineChart different from manually porting code to MQL5?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Manual porting means rewriting every Pine Script line in MQL5 — a different language with different data models, no series semantics, and no built-in TA library. This takes hours or days per indicator, requires MQL5 expertise, and you have to redo the work every time the original Pine Script changes. PineChart eliminates all of that: drop in your Pine Script source file and it runs as-is. The built-in interpreter faithfully reproduces Pine Script's per-bar execution model, NA propagation, series reverse-access semantics, and 294+ built-in functions. You also get a modern TradingView-style charting UI for free."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I run multiple Pine Script indicators at the same time?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. PineChart supports multi-indicator mode via a comma-separated list in the InpIndicators input. Each indicator gets its own isolated execution context (PineContext, UDT pool, table pool, cached AST) while sharing bar data, the PlotManager, DrawingStore, and SecurityDataPool. You can also run one optional strategy alongside your indicators using the InpStrategy input."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does PineChart work with any MT5 broker?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "PineChart runs as a standard MQL5 Expert Advisor, so it works with any MetaTrader 5 broker. There are no special server-side requirements. As long as your broker provides a standard MT5 terminal, PineChart will run. For strategy execution and live trading, order compatibility depends on your broker's supported filling modes and order types, but the core Pine Script indicator functionality works universally."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens with Pine Script functions that aren't supported yet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If your Pine Script calls a function that PineChart hasn't implemented yet, the interpreter will log a message in the Experts tab identifying the unsupported function. Unsupported functions typically return na (not available) or 0, depending on context, so the rest of your script continues to execute. The API is actively being expanded — currently at 42% coverage (294 of 701 functions) with regular updates adding new namespaces and built-ins."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is PineChart the same as TradingView inside MT5?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "PineChart is not TradingView and is not affiliated with TradingView. It is an independent MQL5 Expert Advisor that provides two things: (1) a Pine Script interpreter that can execute Pine Script v5/v6 source code inside MetaTrader 5, and (2) a modern, TradingView-style charting interface rendered on a single canvas. It does not connect to TradingView's servers or use TradingView's data. All market data comes from your MT5 broker. Think of PineChart as bringing Pine Script compatibility and a modern charting UI to the MT5 ecosystem."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where do I get PineChart and how much does it cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "PineChart is available on the MQL5 Marketplace. Visit the marketplace listing to see the current pricing, download the free demo, read user reviews, and purchase. After purchase, the EA is installed directly into your MetaTrader 5 terminal and is ready to use immediately."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- ===== Navigation ===== -->
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="container nav-inner">
+      <a href="#" class="nav-logo" aria-label="PineChart Home">
+        <img src="logo3.1.png" alt="PineChart logo" width="36" height="36">
+        <span>PineChart</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#how-to-run">How It Works</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#api-coverage">API Coverage</a></li>
+        <li><a href="#comparison">Comparison</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#get-pinechart" class="nav-cta">Get PineChart</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="hero">
+      <div class="hero-orb hero-orb--1"></div>
+      <div class="hero-orb hero-orb--2"></div>
+      <div class="hero-orb hero-orb--3"></div>
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge">MQL5 Expert Advisor</span>
+        </div>
+        <h1>Run <span class="gradient-text">Pine Script</span> Inside MetaTrader 5</h1>
+        <p class="hero-subtitle">
+          PineChart lets you run Pine Script in MT5 — indicators and strategies, no manual conversion to MQL5 required.
+          The easiest way to use Pine Script MetaTrader 5 traders have been asking for: modern TradingView-style
+          charting, 294+ built-in functions, one-click setup.
+        </p>
+        <div class="hero-buttons">
+          <a href="#get-pinechart" class="btn btn-primary">Get PineChart on MQL5</a>
+          <a href="#how-to-run" class="btn btn-secondary">See How It Works ↓</a>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- ===== How to Run Pine Script in MetaTrader 5 ===== -->
+    <section class="steps-section" id="how-to-run" aria-label="How to run Pine Script in MetaTrader 5">
+      <div class="container">
+        <header class="section-header reveal">
+          <h2>How to Run Pine Script in MetaTrader 5</h2>
+          <p>Three simple steps to run any Pine Script indicator in MT5. No coding, no MQL5 knowledge needed.</p>
+        </header>
+
+        <div class="steps-list">
+          <!-- Step 1 -->
+          <article class="step reveal-left">
+            <div class="step-content">
+              <div class="step-number">1</div>
+              <h3>Copy Your Favourite Indicator or Strategy</h3>
+              <p>
+                Find the Pine Script indicator or strategy you want to use on TradingView. Copy the full source code
+                into a
+                <code>.txt</code> file. PineChart's interpreter supports Pine Script v5/v6 syntax — if/else, for/while
+                loops, var/varip,
+                user-defined functions and types, and 294+ built-in functions. You can run any Pine Script indicator in
+                MT5
+                that uses supported API calls.
+              </p>
+            </div>
+            <div class="step-visual">
+              <div class="placeholder-img">
+                <span class="icon">📋</span>
+                <span>Screenshot: Copying Pine Script source code</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Step 2 -->
+          <article class="step reveal-right">
+            <div class="step-content">
+              <div class="step-number">2</div>
+              <h3>Paste It Into the MT5 Files Directory</h3>
+              <p>
+                Save the <code>.txt</code> file into MetaTrader 5's <strong>MQL5/Files/</strong> folder. This is where
+                PineChart looks
+                for Pine Script source files at startup. You can add as many scripts as you like — PineChart supports
+                running multiple
+                Pine Script indicators simultaneously inside MT5, each with isolated execution state. Every Pine Script
+                indicator in MT5 runs in its own execution context.
+              </p>
+            </div>
+            <div class="step-visual">
+              <div class="placeholder-img">
+                <span class="icon">📁</span>
+                <span>Screenshot: MT5 Files directory with Pine Script files</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Step 3 -->
+          <article class="step reveal-left">
+            <div class="step-content">
+              <div class="step-number">3</div>
+              <h3>Enter the Filename in PineChart — Done</h3>
+              <p>
+                Attach PineChart to any chart and type the filename(s) in the <strong>InpIndicators</strong> input field
+                (comma-separated for multiple). PineChart's lexer tokenizes, parser builds the AST, and the interpreter
+                executes every bar — just like TradingView. Your Pine Script indicator is now running live in MetaTrader
+                5.
+              </p>
+            </div>
+            <div class="step-visual">
+              <div class="placeholder-img">
+                <span class="icon">▶️</span>
+                <span>Screenshot: PineChart running a Pine Script indicator in MT5</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- ===== Key Features of PineChart for MetaTrader 5 ===== -->
+    <section id="features" aria-label="PineChart features for MetaTrader 5">
+      <div class="container">
+        <header class="section-header reveal">
+          <h2>Key Features of PineChart for MetaTrader 5</h2>
+          <p>A full Pine Script engine and modern charting UI — everything you need to run Pine Script in MT5.</p>
+        </header>
+
+        <div class="features-grid stagger">
+          <article class="feature-card reveal" style="--i:0">
+            <div class="feature-icon">🔧</div>
+            <h3>Full Pine Script Interpreter</h3>
+            <p>Built-in lexer, parser, and per-bar execution engine. Designed for Pine Script MetaTrader 5
+              compatibility, it runs v5/v6 source code natively with proper series semantics and NA propagation.</p>
+          </article>
+
+          <article class="feature-card reveal" style="--i:1">
+            <div class="feature-icon">📊</div>
+            <h3>Modern TradingView-Style Charts</h3>
+            <p>Full-canvas rendering: candlesticks, OHLC, line, area, Heiken Ashi, volume. Dark gradient themes,
+              crosshair, grid, zoom, pan — all on a single flicker-free canvas.</p>
+          </article>
+
+          <article class="feature-card reveal" style="--i:2">
+            <div class="feature-icon">📈</div>
+            <h3>37+ Technical Analysis Functions</h3>
+            <p>SMA, EMA, RSI, MACD, Bollinger Bands, Stochastic, SuperTrend, Parabolic SAR, DMI, CCI, ATR, and more —
+              all computed per-bar with correct Pine Script warmup and NA handling.</p>
+          </article>
+
+          <article class="feature-card reveal" style="--i:3">
+            <div class="feature-icon">🎨</div>
+            <h3>Drawing Objects &amp; Tables</h3>
+            <p>Pine Script line, label, box, and hline drawings with a handle-based pool, styled rendering, and FIFO
+              eviction. Plus screen-anchored tables with 9 positions and auto-sized cells.</p>
+          </article>
+
+          <article class="feature-card reveal" style="--i:4">
+            <div class="feature-icon">⚡</div>
+            <h3>Strategy Trading via MQL5</h3>
+            <p>Pine Script strategies execute real orders through MQL5's CTrade. Entry, close, exit, cancel — all mapped
+              to your broker. Backtest in MT5 Strategy Tester, go live on any account.</p>
+          </article>
+
+          <article class="feature-card reveal" style="--i:5">
+            <div class="feature-icon">🔀</div>
+            <h3>Multi-Indicator &amp; Multi-Timeframe</h3>
+            <p>Run multiple Pine Script indicators at the same time with isolated state. Use request.security() for
+              cross-symbol and higher-timeframe data, just like in TradingView.</p>
+          </article>
+
+          <article class="feature-card reveal" style="--i:6">
+            <div class="feature-icon">🛠️</div>
+            <h3>User-Defined Types &amp; Functions</h3>
+            <p>Full UDT support: type declarations, .new() construction, field access, methods, chained access, copy.
+              User functions with default/named args, var persistence, and recursion guard.</p>
+          </article>
+
+          <article class="feature-card reveal" style="--i:7">
+            <div class="feature-icon">🖥️</div>
+            <h3>Interactive Trade Panel</h3>
+            <p>5-tab trade panel (Market, Limit, Stop, Stop Limit, Manage) with risk/reward, lot calculation, on-chart
+              TP/SL drag, partial closes, breakeven, and trailing stop automation.</p>
+          </article>
+
+          <article class="feature-card reveal" style="--i:8">
+            <div class="feature-icon">📡</div>
+            <h3>Alerts, Screener &amp; Replay</h3>
+            <p>Runtime alert engine with Telegram &amp; MetaQuotes notifications. Mini-chart screener panel. Bar replay
+              mode with play/pause and speed control. Seasonal &amp; COT overlays.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- ===== Pine Script API Coverage in MT5 ===== -->
+    <section class="api-section" id="api-coverage" aria-label="Pine Script API coverage in MetaTrader 5">
+      <div class="container">
+        <header class="section-header reveal">
+          <h2>Pine Script API Coverage in MT5</h2>
+          <p>PineChart implements 294 out of 701 Pine Script v5/v6 API functions — approximately 42% of the full Pine
+            Script MetaTrader 5 specification, and growing with every update.</p>
+        </header>
+
+        <!-- Headline stats -->
+        <div class="api-stats stagger">
+          <div class="stat-card reveal" style="--i:0">
+            <div class="stat-number gradient-text" data-target="294">0</div>
+            <div class="stat-label">Functions Implemented</div>
+          </div>
+          <div class="stat-card reveal" style="--i:1">
+            <div class="stat-number gradient-text" data-target="701">0</div>
+            <div class="stat-label">Total Pine API Functions</div>
+          </div>
+          <div class="stat-card reveal" style="--i:2">
+            <div class="stat-number gradient-text" data-target="42">0</div>
+            <div class="stat-label">Percent Implemented</div>
+          </div>
+          <div class="stat-card reveal" style="--i:3">
+            <div class="stat-number gradient-text" data-target="37">0</div>
+            <div class="stat-label">TA Functions</div>
+          </div>
+        </div>
+
+        <!-- Per-category progress -->
+        <div class="api-categories reveal">
+          <div class="category-row">
+            <span class="category-name">Array</span>
+            <div class="progress-bar">
+              <div class="progress-fill" data-width="77"></div>
+            </div>
+            <span class="category-pct">77%</span>
+          </div>
+          <div class="category-row">
+            <span class="category-name">Technical Analysis</span>
+            <div class="progress-bar">
+              <div class="progress-fill" data-width="50"></div>
+            </div>
+            <span class="category-pct">50%</span>
+          </div>
+          <div class="category-row">
+            <span class="category-name">String</span>
+            <div class="progress-bar">
+              <div class="progress-fill" data-width="88"></div>
+            </div>
+            <span class="category-pct">88%</span>
+          </div>
+          <div class="category-row">
+            <span class="category-name">Input</span>
+            <div class="progress-bar">
+              <div class="progress-fill" data-width="100"></div>
+            </div>
+            <span class="category-pct">100%</span>
+          </div>
+          <div class="category-row">
+            <span class="category-name">Strategy</span>
+            <div class="progress-bar">
+              <div class="progress-fill" data-width="60"></div>
+            </div>
+            <span class="category-pct">60%</span>
+          </div>
+          <div class="category-row">
+            <span class="category-name">Drawing / Tables</span>
+            <div class="progress-bar">
+              <div class="progress-fill" data-width="55"></div>
+            </div>
+            <span class="category-pct">55%</span>
+          </div>
+          <div class="category-row">
+            <span class="category-name">Control Flow</span>
+            <div class="progress-bar">
+              <div class="progress-fill" data-width="95"></div>
+            </div>
+            <span class="category-pct">95%</span>
+          </div>
+          <div class="category-row">
+            <span class="category-name">Barstate / Syminfo</span>
+            <div class="progress-bar">
+              <div class="progress-fill" data-width="75"></div>
+            </div>
+            <span class="category-pct">75%</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- ===== Pine Script in MT5 vs TradingView ===== -->
+    <section class="platform-section" id="mt5-vs-tradingview" aria-label="Pine Script in MT5 vs TradingView">
+      <div class="container">
+        <header class="section-header reveal">
+          <h2>Pine Script in MT5 vs TradingView</h2>
+        </header>
+        <div class="platform-body reveal">
+          <p>
+            TradingView is a web-based charting platform where Pine Script runs natively — but it's a separate ecosystem
+            from your broker's trading terminal.
+            MetaTrader 5 is the standalone trading terminal used by the majority of forex and CFD brokers worldwide and
+            does not support Pine Script out of the box.
+            This means traders who want to use their favourite Pine Script indicators for live trading in MT5 have
+            traditionally had to manually rewrite every script in MQL5 — a completely different language.
+            PineChart bridges that gap by providing a full Pine Script interpreter that runs directly inside MetaTrader
+            5, so you can use the same indicator source code on both platforms.
+            There's no need to maintain two separate codebases or switch between platforms.
+            If you want to run Pine Script in MetaTrader 5 without learning MQL5, PineChart is the solution.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- ===== PineChart vs Manual MQL5 Conversion ===== -->
+    <section id="comparison" aria-label="PineChart vs manual MQL5 conversion">
+      <div class="container">
+        <header class="section-header reveal">
+          <h2>PineChart vs Manual MQL5 Conversion</h2>
+          <p>See why traders choose PineChart to run Pine Script in MT5 instead of manually rewriting code into MQL5.
+            Every Pine Script indicator in MT5 is just a file drop away.</p>
+        </header>
+
+        <div class="comparison-table-wrapper reveal-scale">
+          <table class="comparison-table" role="table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th class="highlight">PineChart</th>
+                <th>Manual MQL5 Port</th>
+                <th>Freelance Developer</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Setup time</td>
+                <td class="highlight"><span class="check">✓</span> Minutes</td>
+                <td><span class="cross">✗</span> Days to weeks</td>
+                <td><span class="partial">~</span> Days + communication</td>
+              </tr>
+              <tr>
+                <td>MQL5 knowledge required</td>
+                <td class="highlight"><span class="check">✓</span> None</td>
+                <td><span class="cross">✗</span> Expert level</td>
+                <td><span class="check">✓</span> None (developer handles)</td>
+              </tr>
+              <tr>
+                <td>Works with any Pine Script</td>
+                <td class="highlight"><span class="partial">~</span> 42% API (growing)</td>
+                <td><span class="check">✓</span> Full (if skilled)</td>
+                <td><span class="check">✓</span> Depends on developer</td>
+              </tr>
+              <tr>
+                <td>Update when script changes</td>
+                <td class="highlight"><span class="check">✓</span> Replace file, done</td>
+                <td><span class="cross">✗</span> Re-port everything</td>
+                <td><span class="cross">✗</span> Pay again</td>
+              </tr>
+              <tr>
+                <td>Multiple indicators</td>
+                <td class="highlight"><span class="check">✓</span> Unlimited, comma-separated</td>
+                <td><span class="cross">✗</span> One EA per indicator</td>
+                <td><span class="cross">✗</span> Pay per indicator</td>
+              </tr>
+              <tr>
+                <td>Modern charting UI</td>
+                <td class="highlight"><span class="check">✓</span> TradingView-style</td>
+                <td><span class="cross">✗</span> Default MT5 chart</td>
+                <td><span class="cross">✗</span> Default MT5 chart</td>
+              </tr>
+              <tr>
+                <td>Strategy backtesting</td>
+                <td class="highlight"><span class="check">✓</span> MT5 Strategy Tester</td>
+                <td><span class="check">✓</span> MT5 Strategy Tester</td>
+                <td><span class="check">✓</span> MT5 Strategy Tester</td>
+              </tr>
+              <tr>
+                <td>Ongoing cost</td>
+                <td class="highlight"><span class="check">✓</span> One-time purchase</td>
+                <td><span class="check">✓</span> Free (your time)</td>
+                <td><span class="cross">✗</span> Per-project fee</td>
+              </tr>
+              <tr>
+                <td>Works with any MT5 broker</td>
+                <td class="highlight"><span class="check">✓</span> Yes</td>
+                <td><span class="check">✓</span> Yes</td>
+                <td><span class="check">✓</span> Yes</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- ===== Frequently Asked Questions About Pine Script in MetaTrader 5 ===== -->
+    <section class="faq-section" id="faq"
+      aria-label="Frequently asked questions about running Pine Script in MetaTrader 5">
+      <div class="container">
+        <header class="section-header reveal">
+          <h2>Frequently Asked Questions About Pine Script in MetaTrader 5</h2>
+          <p>Everything you need to know about running Pine Script indicators and strategies in MT5 with PineChart.</p>
+        </header>
+
+        <div class="faq-list">
+
+          <!-- FAQ 1 -->
+          <div class="faq-item reveal" style="--i:0" itemscope itemprop="mainEntity"
+            itemtype="https://schema.org/Question">
+            <button class="faq-question" aria-expanded="false" itemprop="name">
+              Can I run Pine Script indicators in MetaTrader 5?
+              <span class="faq-toggle">+</span>
+            </button>
+            <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div class="faq-answer-inner" itemprop="text">
+                Yes. PineChart is an MQL5 Expert Advisor that runs Pine Script indicators directly inside MetaTrader 5.
+                You paste your Pine Script source file into the MT5 Files directory, type the filename in the EA input,
+                and PineChart's built-in interpreter executes the script on every bar — no manual conversion to MQL5 is
+                needed. It currently supports 294 out of 701 Pine Script functions (approximately 42% of the full API),
+                including moving averages, oscillators, drawing objects, and more.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item reveal" style="--i:1" itemscope itemprop="mainEntity"
+            itemtype="https://schema.org/Question">
+            <button class="faq-question" aria-expanded="false" itemprop="name">
+              Do I need to manually convert my Pine Script to MQL5?
+              <span class="faq-toggle">+</span>
+            </button>
+            <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div class="faq-answer-inner" itemprop="text">
+                No. PineChart includes a full Pine Script interpreter built entirely in MQL5. It has its own lexer,
+                parser, and per-bar execution engine that reads your .txt Pine Script files at runtime. You never touch
+                MQL5 code. Just place your Pine Script source file in the MT5 Files directory, specify the filename in
+                the EA settings, and PineChart handles the rest — tokenizing, parsing the AST, and executing each bar
+                with the correct Pine Script semantics.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item reveal" style="--i:2" itemscope itemprop="mainEntity"
+            itemtype="https://schema.org/Question">
+            <button class="faq-question" aria-expanded="false" itemprop="name">
+              What Pine Script functions and built-ins does PineChart support?
+              <span class="faq-toggle">+</span>
+            </button>
+            <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div class="faq-answer-inner" itemprop="text">
+                PineChart currently implements 294 out of 701 Pine Script v5/v6 API functions (approximately 42%). This
+                includes: 37+ technical analysis functions (SMA, EMA, RSI, MACD, Bollinger Bands, Stochastic,
+                SuperTrend, Parabolic SAR, DMI, CCI, ATR, and more), 30+ array functions, 16 string functions, 14 input
+                types, full strategy order functions (entry, close, exit, cancel), drawing objects (line, label, box,
+                hline), tables, request.security() for multi-timeframe data, user-defined types and functions, and all
+                control flow (if/else, for, while, switch, var/varip). See the API coverage section above for a
+                category-by-category breakdown.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item reveal" style="--i:3" itemscope itemprop="mainEntity"
+            itemtype="https://schema.org/Question">
+            <button class="faq-question" aria-expanded="false" itemprop="name">
+              Does PineChart support Pine Script strategies, not just indicators?
+              <span class="faq-toggle">+</span>
+            </button>
+            <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div class="faq-answer-inner" itemprop="text">
+                Yes. PineChart supports Pine Script strategies with real order execution through MQL5's CTrade library.
+                You can use strategy.entry(), strategy.close(), strategy.close_all(), strategy.exit(), strategy.order(),
+                strategy.cancel(), and strategy.cancel_all(). Strategy properties like strategy.position_size,
+                strategy.equity, strategy.netprofit, and strategy.openprofit are also available. Strategies run in MT5's
+                Strategy Tester for backtesting and can execute live trades on a real or demo account.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item reveal" style="--i:4" itemscope itemprop="mainEntity"
+            itemtype="https://schema.org/Question">
+            <button class="faq-question" aria-expanded="false" itemprop="name">
+              How is PineChart different from manually porting code to MQL5?
+              <span class="faq-toggle">+</span>
+            </button>
+            <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div class="faq-answer-inner" itemprop="text">
+                Manual porting means rewriting every Pine Script line in MQL5 — a different language with different data
+                models, no series semantics, and no built-in TA library. This takes hours or days per indicator,
+                requires MQL5 expertise, and you have to redo the work every time the original Pine Script changes.
+                PineChart eliminates all of that: drop in your Pine Script source file and it runs as-is. The built-in
+                interpreter faithfully reproduces Pine Script's per-bar execution model, NA propagation, series
+                reverse-access semantics, and 294+ built-in functions. You also get a modern TradingView-style charting
+                UI for free.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-item reveal" style="--i:5" itemscope itemprop="mainEntity"
+            itemtype="https://schema.org/Question">
+            <button class="faq-question" aria-expanded="false" itemprop="name">
+              Can I run multiple Pine Script indicators at the same time?
+              <span class="faq-toggle">+</span>
+            </button>
+            <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div class="faq-answer-inner" itemprop="text">
+                Yes. PineChart supports multi-indicator mode via a comma-separated list in the InpIndicators input. Each
+                indicator gets its own isolated execution context (PineContext, UDT pool, table pool, cached AST) while
+                sharing bar data, the PlotManager, DrawingStore, and SecurityDataPool. You can also run one optional
+                strategy alongside your indicators using the InpStrategy input.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 7 -->
+          <div class="faq-item reveal" style="--i:6" itemscope itemprop="mainEntity"
+            itemtype="https://schema.org/Question">
+            <button class="faq-question" aria-expanded="false" itemprop="name">
+              Does PineChart work with any MT5 broker?
+              <span class="faq-toggle">+</span>
+            </button>
+            <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div class="faq-answer-inner" itemprop="text">
+                PineChart runs as a standard MQL5 Expert Advisor, so it works with any MetaTrader 5 broker. There are no
+                special server-side requirements. As long as your broker provides a standard MT5 terminal, PineChart
+                will run. For strategy execution and live trading, order compatibility depends on your broker's
+                supported filling modes and order types, but the core Pine Script indicator functionality works
+                universally.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 8 -->
+          <div class="faq-item reveal" style="--i:7" itemscope itemprop="mainEntity"
+            itemtype="https://schema.org/Question">
+            <button class="faq-question" aria-expanded="false" itemprop="name">
+              What happens with Pine Script functions that aren't supported yet?
+              <span class="faq-toggle">+</span>
+            </button>
+            <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div class="faq-answer-inner" itemprop="text">
+                If your Pine Script calls a function that PineChart hasn't implemented yet, the interpreter will log a
+                message in the Experts tab identifying the unsupported function. Unsupported functions typically return
+                na (not available) or 0, depending on context, so the rest of your script continues to execute. The API
+                is actively being expanded — currently at 42% coverage (294 of 701 functions) with regular updates
+                adding new namespaces and built-ins.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 9 -->
+          <div class="faq-item reveal" style="--i:8" itemscope itemprop="mainEntity"
+            itemtype="https://schema.org/Question">
+            <button class="faq-question" aria-expanded="false" itemprop="name">
+              Is PineChart the same as TradingView inside MT5?
+              <span class="faq-toggle">+</span>
+            </button>
+            <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div class="faq-answer-inner" itemprop="text">
+                PineChart is not TradingView and is not affiliated with TradingView. It is an independent MQL5 Expert
+                Advisor that provides two things: (1) a Pine Script interpreter that can execute Pine v5/v6 source code
+                inside MetaTrader 5, and (2) a modern, TradingView-style charting interface rendered on a single canvas.
+                It does not connect to TradingView's servers or use TradingView's data. All market data comes from your
+                MT5 broker. Think of PineChart as bringing Pine Script compatibility and a modern charting UI to the MT5
+                ecosystem.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 10 -->
+          <div class="faq-item reveal" style="--i:9" itemscope itemprop="mainEntity"
+            itemtype="https://schema.org/Question">
+            <button class="faq-question" aria-expanded="false" itemprop="name">
+              Where do I get PineChart and how much does it cost?
+              <span class="faq-toggle">+</span>
+            </button>
+            <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div class="faq-answer-inner" itemprop="text">
+                PineChart is available on the MQL5 Marketplace. Visit the marketplace listing to see the current
+                pricing, download the free demo, read user reviews, and purchase. After purchase, the EA is installed
+                directly into your MetaTrader 5 terminal and is ready to use immediately.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- ===== Get PineChart ===== -->
+    <section class="cta-section" id="get-pinechart">
+      <div class="container">
+        <div class="cta-content reveal">
+          <h2>Start Running Pine Script in MetaTrader 5 Today</h2>
+          <p>Get PineChart from the MQL5 Marketplace and run Pine Script in MT5 in minutes. One-time purchase, free
+            updates, works with any broker.</p>
+          <div class="hero-buttons">
+            <a href="#" class="btn btn-primary">Get PineChart on MQL5 Marketplace</a>
+            <a href="#" class="btn btn-secondary">Download Free Demo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="footer-copy">&copy; 2026 PineChart. All rights reserved.</span>
+      <ul class="footer-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#api-coverage">API Coverage</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#">MQL5 Marketplace</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
