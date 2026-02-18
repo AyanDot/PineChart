@@ -59,7 +59,7 @@ for i = 0 to array.size(myArray) - 1
 
 ## NA Propagation Behavior
 
-PineChart represents `na` as `DBL_MAX` (the largest possible float). This is faithful to Pine Script semantics, but be aware:
+PineChart faithfully implements Pine Script's `na` (Not Available) semantics. Be aware:
 
 - TA functions return `na` for the first N-1 bars (warmup period)
 - Any arithmetic with `na` produces `na`

@@ -116,7 +116,7 @@ No custom backtester — MT5's Strategy Tester provides backtesting for free. Li
 
 PineChart faithfully implements Pine Script's NA (Not Available) semantics:
 
-- `na` is represented as `DBL_MAX` throughout the system
+- `na` propagates correctly throughout the system
 - TA functions return `na` during their warmup period (first N-1 bars)
 - Arithmetic with `na` propagates: `na + 5 = na`
 - Plot gaps are rendered correctly when values are `na`
