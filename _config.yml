@@ -6,7 +6,7 @@ plugins:
   - jekyll-remote-theme
 
 url: ""
-baseurl: ""
+baseurl: "/PineChart"
 
 color_scheme: dark
 
@@ -20,9 +20,6 @@ heading_anchors: true
 exclude:
   - node_modules/
   - vendor/
-  - style.css
-  - main.js
-  - logo3.1.png
   - README.md
   - Gemfile.lock
 
