@@ -161,16 +161,12 @@
 
   <script src="main.js"></script>
 
-  <!-- GoatCounter: privacy-friendly analytics (no cookies, no personal data) -->
-  <script data-goatcounter="https://pinechart.goatcounter.com/count"
-    async src="https://gc.zgo.at/count.js"></script>
-
-  <!-- Track demo downloads as a custom event -->
+  <!-- Track demo downloads via Cloudflare Worker -->
   <script>
+    // IMPORTANT: Replace this with your actual Cloudflare Worker URL after deployment
+    var WORKER_URL = 'https://pinechart-demo-counter.ayanminhasshayar.workers.dev';
     document.getElementById('demoDownload').addEventListener('click', function () {
-      if (window.goatcounter && window.goatcounter.count) {
-        window.goatcounter.count({ path: '/demo-download', title: 'Demo Download', event: true });
-      }
+      fetch(WORKER_URL + '/track', { method: 'POST' }).catch(function () {});
     });
   </script>
 </body>

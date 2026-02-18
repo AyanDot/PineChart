@@ -22,6 +22,7 @@ exclude:
   - vendor/
   - README.md
   - Gemfile.lock
+  - worker.js
 
 defaults:
   - scope:

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>PineChart Demo Downloads</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="logo3.1.png" type="image/png">
+</head>
+
+<body>
+
+  <main>
+    <section class="hero" style="min-height: 100vh; padding-top: 80px;">
+      <div class="hero-content" style="max-width: 900px; text-align: left;">
+        <h1 style="font-size: 2rem; margin-bottom: var(--space-2xl);">Demo Download Stats</h1>
+
+        <!-- Total -->
+        <div class="stat-card" style="display: inline-block; padding: var(--space-2xl) var(--space-3xl); margin-bottom: var(--space-2xl);">
+          <div class="stat-number gradient-text" id="totalCount" style="font-size: 3.5rem;">--</div>
+          <div class="stat-label">Total Downloads</div>
+        </div>
+
+        <!-- Countries -->
+        <h2 style="font-size: 1.3rem; color: var(--text-heading); margin-bottom: var(--space-lg);">Downloads by Country</h2>
+        <div id="countriesGrid" class="api-categories" style="margin-bottom: var(--space-2xl);">
+          <p style="color: var(--text-secondary);">Loading...</p>
+        </div>
+
+        <!-- Recent -->
+        <h2 style="font-size: 1.3rem; color: var(--text-heading); margin-bottom: var(--space-lg);">Recent Downloads</h2>
+        <div id="recentList"
+          style="background: var(--bg-card); border: 1px solid var(--border-card); border-radius: var(--radius-md); padding: var(--space-lg); max-height: 400px; overflow-y: auto;">
+          <p style="color: var(--text-secondary);">Loading...</p>
+        </div>
+
+        <div style="margin-top: var(--space-2xl);">
+          <a href="./" class="btn btn-secondary">Back to Home</a>
+          <button class="btn btn-secondary" onclick="loadStats()" style="margin-left: var(--space-md);">Refresh</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // IMPORTANT: Replace this with your actual Cloudflare Worker URL after deployment
+    const WORKER_URL = 'https://pinechart-demo-counter.ayanminhasshayar.workers.dev';
+
+    async function loadStats() {
+      try {
+        const res = await fetch(WORKER_URL + '/stats');
+        const data = await res.json();
+
+        // Total
+        document.getElementById('totalCount').textContent = data.total.toLocaleString();
+
+        // Countries
+        const grid = document.getElementById('countriesGrid');
+        if (Object.keys(data.countries).length === 0) {
+          grid.innerHTML = '<p style="color: var(--text-secondary);">No downloads yet.</p>';
+        } else {
+          const sorted = Object.entries(data.countries).sort((a, b) => b[1] - a[1]);
+          const total = data.total || 1;
+          grid.innerHTML = sorted.map(([country, count]) => {
+            const pct = Math.round((count / total) * 100);
+            return `
+              <div class="category-row">
+                <span class="category-name">${countryFlag(country)} ${country}</span>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: ${pct}%;"></div>
+                </div>
+                <span class="category-pct">${count}</span>
+              </div>`;
+          }).join('');
+        }
+
+        // Recent
+        const list = document.getElementById('recentList');
+        if (data.recent.length === 0) {
+          list.innerHTML = '<p style="color: var(--text-secondary);">No downloads yet.</p>';
+        } else {
+          list.innerHTML = data.recent.map(d => {
+            const time = new Date(d.timestamp).toLocaleString();
+            return `<div style="padding: 6px 0; border-bottom: 1px solid var(--border-subtle); color: var(--text-secondary); font-size: 0.9rem;">
+              <span style="color: var(--text-primary); font-weight: 500;">${countryFlag(d.country)} ${d.country}</span>
+              <span style="float: right; font-family: var(--font-mono); font-size: 0.8rem;">${time}</span>
+            </div>`;
+          }).join('');
+        }
+      } catch (e) {
+        document.getElementById('totalCount').textContent = 'Error';
+        document.getElementById('countriesGrid').innerHTML =
+          `<p style="color: #ef4444;">Failed to load stats. Make sure the Worker URL is configured.<br><code style="font-size: 0.8rem;">${e.message}</code></p>`;
+      }
+    }
+
+    // Convert country code to flag emoji
+    function countryFlag(code) {
+      if (!code || code === 'Unknown' || code.length !== 2) return '';
+      return String.fromCodePoint(...[...code.toUpperCase()].map(c => 0x1F1E6 + c.charCodeAt(0) - 65));
+    }
+
+    loadStats();
+  </script>
+</body>
+
+</html>
