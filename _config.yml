@@ -1,0 +1,49 @@
+title: PineChart Docs
+description: Documentation for PineChart — Run Pine Script indicators and strategies in MetaTrader 5
+theme: just-the-docs
+
+url: ""
+baseurl: ""
+
+color_scheme: dark
+
+search_enabled: true
+search.heading_level: 3
+
+nav_sort: case_insensitive
+
+heading_anchors: true
+
+exclude:
+  - node_modules/
+  - vendor/
+  - style.css
+  - main.js
+  - logo3.1.png
+  - README.md
+  - Gemfile.lock
+
+defaults:
+  - scope:
+      path: "docs"
+    values:
+      layout: default
+
+aux_links:
+  "Get PineChart":
+    - "https://www.mql5.com/en/market"
+
+aux_links_new_tab: true
+
+footer_content: "&copy; 2026 PineChart. All rights reserved."
+
+callouts:
+  note:
+    title: Note
+    color: blue
+  warning:
+    title: Warning
+    color: red
+  tip:
+    title: Tip
+    color: green
