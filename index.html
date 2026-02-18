@@ -288,68 +288,111 @@
           <p>A full Pine Script engine and modern charting UI — everything you need to run Pine Script in MT5.</p>
         </header>
 
+        <!-- Visual feature showcases -->
+        <div class="feature-showcases">
+
+          <!-- Modern Charts -->
+          <article class="feature-showcase reveal-left">
+            <div class="feature-showcase-text">
+              <h3>Modern TradingView-Style Charts</h3>
+              <p>Full-canvas rendering: candlesticks, OHLC, line, area, Heiken Ashi, volume. Dark gradient themes,
+                crosshair, grid, zoom, pan — all on a single flicker-free canvas.</p>
+            </div>
+            <div class="feature-showcase-visual">
+              <img src="ModernChart.gif" alt="Modern TradingView-style chart in MetaTrader 5" loading="lazy">
+            </div>
+          </article>
+
+          <!-- Trade Panel -->
+          <article class="feature-showcase reveal-right">
+            <div class="feature-showcase-text">
+              <h3>Interactive Trade Panel <span class="feature-badge">V2</span></h3>
+              <p>5-tab trade panel (Market, Limit, Stop, Stop Limit, Manage) with risk/reward, lot calculation, on-chart
+                TP/SL drag, partial closes, breakeven, and trailing stop automation.</p>
+            </div>
+            <div class="feature-showcase-visual">
+              <img src="TradePanelDemo.gif" alt="Interactive trade panel in PineChart" loading="lazy">
+            </div>
+          </article>
+
+          <!-- Screener -->
+          <article class="feature-showcase reveal-left">
+            <div class="feature-showcase-text">
+              <h3>Multi-Symbol Screener</h3>
+              <p>Mini-chart screener panel that fetches symbols from Market Watch and displays them side by side.
+                Scan multiple instruments at a glance without leaving your chart.</p>
+            </div>
+            <div class="feature-showcase-visual">
+              <img src="Screener.gif" alt="Multi-symbol screener panel" loading="lazy">
+            </div>
+          </article>
+
+          <!-- Alerts -->
+          <article class="feature-showcase reveal-right">
+            <div class="feature-showcase-text">
+              <h3>Alerts &amp; Notifications</h3>
+              <p>Runtime alert engine with Telegram and MetaQuotes push notifications. Set price alerts,
+                crossing conditions, and custom triggers — get notified instantly on any device.</p>
+            </div>
+            <div class="feature-showcase-visual">
+              <img src="Alert.gif" alt="Alert configuration and notifications" loading="lazy">
+            </div>
+          </article>
+
+          <!-- Replay -->
+          <article class="feature-showcase reveal-left">
+            <div class="feature-showcase-text">
+              <h3>Bar Replay Mode</h3>
+              <p>Step through historical bars one at a time with play/pause and speed control.
+                Practice your strategy on past data, review setups, and study price action at your own pace.</p>
+            </div>
+            <div class="feature-showcase-visual">
+              <img src="Replay.gif" alt="Bar replay mode with playback controls" loading="lazy">
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Pine Script engine features (text-only compact grid) -->
+        <div class="engine-features-header">
+          <h3>Pine Script Engine</h3>
+        </div>
+
         <div class="features-grid stagger">
           <article class="feature-card reveal" style="--i:0">
-            <div class="feature-icon">🔧</div>
             <h3>Full Pine Script Interpreter</h3>
-            <p>Built-in lexer, parser, and per-bar execution engine. Designed for Pine Script MetaTrader 5
-              compatibility, it runs v5/v6 source code natively with proper series semantics and NA propagation.</p>
+            <p>Built-in lexer, parser, and per-bar execution engine. Runs Pine Script v5/v6 source code natively
+              with proper series semantics and NA propagation.</p>
           </article>
 
           <article class="feature-card reveal" style="--i:1">
-            <div class="feature-icon">📊</div>
-            <h3>Modern TradingView-Style Charts</h3>
-            <p>Full-canvas rendering: candlesticks, OHLC, line, area, Heiken Ashi, volume. Dark gradient themes,
-              crosshair, grid, zoom, pan — all on a single flicker-free canvas.</p>
-          </article>
-
-          <article class="feature-card reveal" style="--i:2">
-            <div class="feature-icon">📈</div>
             <h3>37+ Technical Analysis Functions</h3>
             <p>SMA, EMA, RSI, MACD, Bollinger Bands, Stochastic, SuperTrend, Parabolic SAR, DMI, CCI, ATR, and more —
               all computed per-bar with correct Pine Script warmup and NA handling.</p>
           </article>
 
-          <article class="feature-card reveal" style="--i:3">
-            <div class="feature-icon">🎨</div>
+          <article class="feature-card reveal" style="--i:2">
             <h3>Drawing Objects &amp; Tables</h3>
-            <p>Pine Script line, label, box, and hline drawings with a handle-based pool, styled rendering, and FIFO
-              eviction. Plus screen-anchored tables with 9 positions and auto-sized cells.</p>
+            <p>Pine Script line, label, box, and hline drawings with styled rendering and automatic eviction.
+              Plus screen-anchored tables with 9 positions and auto-sized cells.</p>
           </article>
 
-          <article class="feature-card reveal" style="--i:4">
-            <div class="feature-icon">⚡</div>
+          <article class="feature-card reveal" style="--i:3">
             <h3>Strategy Trading via MQL5</h3>
             <p>Pine Script strategies execute real orders through MQL5's CTrade. Entry, close, exit, cancel — all mapped
               to your broker. Backtest in MT5 Strategy Tester, go live on any account.</p>
           </article>
 
-          <article class="feature-card reveal" style="--i:5">
-            <div class="feature-icon">🔀</div>
+          <article class="feature-card reveal" style="--i:4">
             <h3>Multi-Indicator &amp; Multi-Timeframe</h3>
             <p>Run multiple Pine Script indicators at the same time with isolated state. Use request.security() for
               cross-symbol and higher-timeframe data, just like in TradingView.</p>
           </article>
 
-          <article class="feature-card reveal" style="--i:6">
-            <div class="feature-icon">🛠️</div>
+          <article class="feature-card reveal" style="--i:5">
             <h3>User-Defined Types &amp; Functions</h3>
             <p>Full UDT support: type declarations, .new() construction, field access, methods, chained access, copy.
               User functions with default/named args, var persistence, and recursion guard.</p>
-          </article>
-
-          <article class="feature-card reveal" style="--i:7">
-            <div class="feature-icon">🖥️</div>
-            <h3>Interactive Trade Panel</h3>
-            <p>5-tab trade panel (Market, Limit, Stop, Stop Limit, Manage) with risk/reward, lot calculation, on-chart
-              TP/SL drag, partial closes, breakeven, and trailing stop automation.</p>
-          </article>
-
-          <article class="feature-card reveal" style="--i:8">
-            <div class="feature-icon">📡</div>
-            <h3>Alerts, Screener &amp; Replay</h3>
-            <p>Runtime alert engine with Telegram &amp; MetaQuotes notifications. Mini-chart screener panel. Bar replay
-              mode with play/pause and speed control. Seasonal &amp; COT overlays.</p>
           </article>
         </div>
       </div>

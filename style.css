@@ -616,6 +616,95 @@ section {
     line-height: 1.7;
 }
 
+/* ---------- Feature Showcases (GIF + text, alternating) ---------- */
+.feature-showcases {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4xl);
+    margin-bottom: var(--space-4xl);
+}
+
+.feature-showcase {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+    align-items: center;
+}
+
+.feature-showcase:nth-child(even) .feature-showcase-visual {
+    order: -1;
+}
+
+.feature-showcase-visual {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: var(--bg-card);
+    border: 1px solid var(--border-card);
+    aspect-ratio: 16 / 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-showcase-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.feature-showcase-text h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-heading);
+    margin-bottom: var(--space-md);
+}
+
+.feature-showcase-text p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.feature-badge {
+    display: inline-block;
+    padding: 0.2em 0.7em;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-radius: var(--radius-full);
+    background: rgba(139, 92, 246, 0.15);
+    color: var(--accent-purple);
+    border: 1px solid rgba(139, 92, 246, 0.25);
+    margin-left: 0.5em;
+    vertical-align: middle;
+}
+
+/* Engine features compact grid */
+.engine-features-header {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+}
+
+.engine-features-header h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+@media (max-width: 768px) {
+    .feature-showcase {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-showcase:nth-child(even) .feature-showcase-visual {
+        order: 0;
+    }
+}
+
 /* ---------- API Coverage ---------- */
 .api-section {
     background: var(--bg-secondary);
