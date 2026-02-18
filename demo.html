@@ -54,7 +54,7 @@
           The demo is fully functional but limited to demo accounts and 10-minute sessions — see details below.
         </p>
         <div class="hero-buttons">
-          <a href="PineChart.ex5" download class="btn btn-primary">Download PineChart Demo (.ex5)</a>
+          <a href="PineChart.ex5" download class="btn btn-primary" id="demoDownload">Download PineChart Demo (.ex5)</a>
         </div>
       </div>
     </section>
@@ -160,6 +160,19 @@
   </footer>
 
   <script src="main.js"></script>
+
+  <!-- GoatCounter: privacy-friendly analytics (no cookies, no personal data) -->
+  <script data-goatcounter="https://pinechart.goatcounter.com/count"
+    async src="//gc.zgo.at/count.js"></script>
+
+  <!-- Track demo downloads as a custom event -->
+  <script>
+    document.getElementById('demoDownload').addEventListener('click', function () {
+      if (window.goatcounter && window.goatcounter.count) {
+        window.goatcounter.count({ path: '/demo-download', title: 'Demo Download', event: true });
+      }
+    });
+  </script>
 </body>
 
 </html>
