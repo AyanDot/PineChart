@@ -91,7 +91,7 @@ PineChart can run N indicators + 1 optional strategy simultaneously:
 
 ## Rendering Model
 
-Everything draws on a **single fullscreen canvas** — chart, UI, plots, crosshair, drawings, tables. One canvas means one `Update()` call per frame with zero flicker.
+Everything draws on an **optimized canvas** — chart, UI, plots, crosshair, drawings, tables. The rendering pipeline is designed for smooth, lag-free performance with zero flicker, even with multiple indicators and drawing objects active.
 
 **Smart indicator panes**: Each indicator can render in the main chart pane (overlay) or in its own sub-pane below, with independent price scales and auto-scaling. Pane dividers are draggable.
 
