@@ -2,7 +2,7 @@
 
 **PineChart** is an MQL5 Expert Advisor that lets you run Pine Script indicators and strategies directly inside MetaTrader 5 — no manual conversion to MQL5 required.
 
-🔗 **[Get PineChart on MQL5 Marketplace](#)** · **[Download Free Demo](#)**
+**[Get PineChart on MQL5 Marketplace](https://www.mql5.com/en/market/product/164682)** | **[Download Free Demo](https://ayandot.github.io/PineChart/demo.html)** | **[Documentation](https://ayandot.github.io/PineChart/docs/)**
 
 ---
 
@@ -52,4 +52,4 @@ logo3.1.png  — Product logo
 
 ## 📄 License
 
-All rights reserved. PineChart is a commercial product available on the [MQL5 Marketplace](#).
+All rights reserved. PineChart is a commercial product available on the [MQL5 Marketplace](https://www.mql5.com/en/market/product/164682).
