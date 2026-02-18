@@ -1,6 +1,10 @@
 title: PineChart Docs
 description: Documentation for PineChart — Run Pine Script indicators and strategies in MetaTrader 5
 theme: just-the-docs
+remote_theme: just-the-docs/just-the-docs
+
+plugins:
+  - jekyll-remote-theme
 
 url: ""
 baseurl: ""
