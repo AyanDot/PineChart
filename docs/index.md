@@ -11,7 +11,7 @@ has_children: false
 PineChart is an MQL5 Expert Advisor that runs Pine Script indicators and strategies directly inside MetaTrader 5. No manual conversion to MQL5 required.
 
 {: .note }
-PineChart currently implements **294 out of 701** Pine Script v5/v6 API functions (~42%), with new functions added every week.
+PineChart currently implements **338 out of 701** Pine Script v5/v6 API functions (~48%), with new functions added every week.
 
 ---
 

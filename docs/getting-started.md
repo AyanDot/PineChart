@@ -24,7 +24,7 @@ Find the Pine Script indicator or strategy you want to use on TradingView. Copy 
 PineChart supports Pine Script v5/v6 syntax including:
 - `if`/`else`, `for`/`while`, `switch`, `var`/`varip`
 - User-defined functions and types
-- 294+ built-in functions
+- 338+ built-in functions
 
 ```
 // Example: my_indicator.txt

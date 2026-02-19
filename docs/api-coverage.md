@@ -6,11 +6,11 @@ nav_order: 4
 
 # Pine Script API Coverage
 
-PineChart implements **294 out of 701** Pine Script v5/v6 API functions (~42%).
+PineChart implements **338 out of 701** Pine Script v5/v6 API functions (~48%).
 
 **Legend:**
-- ✅ Implemented (294)
-- 🔵 Planned (219)
+- ✅ Implemented (338)
+- 🔵 Planned (175)
 - 🔴 Not Yet Implemented (175)
 - 🟡 Partial (2)
 
@@ -131,19 +131,19 @@ PineChart implements **294 out of 701** Pine Script v5/v6 API functions (~42%).
 | `high` | ✅ | High price |
 | `hl2` | ✅ | Average of high and low |
 | `hlc3` | ✅ | Average of high, low, and close |
-| `hlcc4` | 🔵 | Average of high, low, close, close |
-| `last_bar_index` | 🔵 | Index of last bar |
-| `last_bar_time` | 🔵 | Time of last bar |
+| `hlcc4` | ✅ | Average of high, low, close, close |
+| `last_bar_index` | ✅ | Index of last bar |
+| `last_bar_time` | ✅ | Time of last bar |
 | `low` | ✅ | Low price |
 | `na` | ✅ | Not a number literal |
 | `ohlc4` | ✅ | Average of OHLC |
 | `open` | ✅ | Open price |
-| `timenow` | 🔵 | Current time |
+| `timenow` | ✅ | Current time |
 | `volume` | ✅ | Volume |
 | `ask` | 🔵 | Ask price |
 | `bid` | 🔵 | Bid price |
-| `time` | 🔵 | Bar time |
-| `time_close` | 🔵 | Bar close time |
+| `time` | ✅ | Bar time |
+| `time_close` | ✅ | Bar close time |
 
 ### Constants
 
@@ -158,13 +158,55 @@ PineChart implements **294 out of 701** Pine Script v5/v6 API functions (~42%).
 |:---------|:-------|:------------|
 | `indicator()` | ✅ | Indicator declaration |
 | `input()` | ✅ | Input parameter (returns defval) |
-| `na()` | 🔵 | Check if value is NaN |
+| `na()` | ✅ | Check if value is NaN |
 | `nz()` | ✅ | Replace NaN with zero |
 | `strategy()` | ✅ | Strategy declaration |
 | `hline()` | ✅ | Horizontal line |
 | `box()` | ✅ | Box object |
 | `label()` | ✅ | Label object |
 | `line()` | ✅ | Line object |
+| `color()` | ✅ | Color type cast |
+| `fixnan()` | ✅ | Fix NaN values |
+| `int()` | ✅ | Integer conversion |
+| `float()` | ✅ | Float conversion |
+| `bool()` | ✅ | Boolean conversion |
+| `string()` | ✅ | String conversion |
+| `year()` | ✅ | Year from time |
+| `month()` | ✅ | Month from time |
+| `dayofmonth()` | ✅ | Day of month from time |
+| `dayofweek()` | ✅ | Day of week from time |
+| `hour()` | ✅ | Hour from time |
+| `minute()` | ✅ | Minute from time |
+| `second()` | ✅ | Second from time |
+| `weekofyear()` | ✅ | Week of year from time |
+| `time()` | ✅ | Bar time function |
+| `time_close()` | ✅ | Bar close time function |
+| `timestamp()` | ✅ | Create datetime from components |
+
+### Date/Time Variables
+
+| Variable | Status | Description |
+|:---------|:-------|:------------|
+| `year` | ✅ | Current bar's year |
+| `month` | ✅ | Current bar's month |
+| `dayofmonth` | ✅ | Current bar's day |
+| `dayofweek` | ✅ | Current bar's day of week (1=Sun..7=Sat) |
+| `hour` | ✅ | Current bar's hour |
+| `minute` | ✅ | Current bar's minute |
+| `second` | ✅ | Current bar's second |
+| `weekofyear` | ✅ | Current bar's week of year |
+
+### Dayofweek Constants
+
+| Constant | Status | Value |
+|:---------|:-------|:------|
+| `dayofweek.sunday` | ✅ | 1 |
+| `dayofweek.monday` | ✅ | 2 |
+| `dayofweek.tuesday` | ✅ | 3 |
+| `dayofweek.wednesday` | ✅ | 4 |
+| `dayofweek.thursday` | ✅ | 5 |
+| `dayofweek.friday` | ✅ | 6 |
+| `dayofweek.saturday` | ✅ | 7 |
 
 ---
 
@@ -240,23 +282,23 @@ PineChart implements **294 out of 701** Pine Script v5/v6 API functions (~42%).
 | `color.orange` | ✅ |
 | `color.purple` | ✅ |
 | `color.yellow` | ✅ |
-| `color.maroon` | 🔵 |
-| `color.fuchsia` | 🔵 |
-| `color.olive` | 🔵 |
-| `color.silver` | 🔵 |
-| `color.teal` | 🔵 |
+| `color.maroon` | ✅ |
+| `color.fuchsia` | ✅ |
+| `color.olive` | ✅ |
+| `color.silver` | ✅ |
+| `color.teal` | ✅ |
 
 ### Color Functions
 
 | Function | Status | Description |
 |:---------|:-------|:------------|
-| `color.new()` | 🔵 | Create new color |
-| `color.rgb()` | 🔵 | Create from RGB |
-| `color.r()` | 🔵 | Get red component |
-| `color.g()` | 🔵 | Get green component |
-| `color.b()` | 🔵 | Get blue component |
-| `color.t()` | 🔵 | Get transparency |
-| `color.from_gradient()` | 🔵 | Create from gradient |
+| `color.new()` | ✅ | Create color with transparency |
+| `color.rgb()` | ✅ | Create from RGB components |
+| `color.r()` | ✅ | Get red component (0-255) |
+| `color.g()` | ✅ | Get green component (0-255) |
+| `color.b()` | ✅ | Get blue component (0-255) |
+| `color.t()` | ✅ | Get transparency (0-100) |
+| `color.from_gradient()` | ✅ | Interpolate between two colors |
 
 ---
 
@@ -456,10 +498,10 @@ All map functions are **not yet implemented** (🔴).
 
 | Constant | Status |
 |:---------|:-------|
-| `math.e` | 🔵 |
-| `math.phi` | 🔵 |
-| `math.pi` | 🔵 |
-| `math.rphi` | 🔵 |
+| `math.e` | ✅ |
+| `math.phi` | ✅ |
+| `math.pi` | ✅ |
+| `math.rphi` | ✅ |
 
 ### Basic Operations
 
@@ -470,7 +512,7 @@ All map functions are **not yet implemented** (🔴).
 | `math.floor()` | ✅ |
 | `math.round()` | ✅ |
 | `math.sign()` | ✅ |
-| `math.round_to_mintick()` | 🔵 |
+| `math.round_to_mintick()` | ✅ |
 
 ### Exponential & Logarithmic
 
@@ -488,19 +530,27 @@ All map functions are **not yet implemented** (🔴).
 |:---------|:-------|
 | `math.max()` | ✅ |
 | `math.min()` | ✅ |
-| `math.avg()` | 🔵 |
-| `math.sum()` | 🔵 |
+| `math.avg()` | ✅ |
+| `math.sum()` | ✅ |
 
 ### Trigonometric
 
 | Function | Status |
 |:---------|:-------|
-| `math.cos()` | 🔵 |
-| `math.sin()` | 🔵 |
-| `math.tan()` | 🔵 |
-| `math.acos()` | 🔵 |
-| `math.asin()` | 🔵 |
-| `math.atan()` | 🔵 |
+| `math.cos()` | ✅ |
+| `math.sin()` | ✅ |
+| `math.tan()` | ✅ |
+| `math.acos()` | ✅ |
+| `math.asin()` | ✅ |
+| `math.atan()` | ✅ |
+
+### Utilities
+
+| Function | Status |
+|:---------|:-------|
+| `math.random()` | ✅ |
+| `math.todegrees()` | ✅ |
+| `math.toradians()` | ✅ |
 
 ---
 
@@ -768,9 +818,9 @@ All `strategy.closedtrades.*` and `strategy.opentrades.*` functions (15 total) a
 | `timeframe.isweekly` | ✅ |
 | `timeframe.multiplier` | ✅ |
 | `timeframe.period` | ✅ |
-| `timeframe.isminutes` | 🔴 |
-| `timeframe.isseconds` | 🔴 |
-| `timeframe.isticks` | 🔴 |
+| `timeframe.isminutes` | ✅ |
+| `timeframe.isseconds` | ✅ |
+| `timeframe.isticks` | ✅ |
 
 ---
 
@@ -784,9 +834,11 @@ All `strategy.closedtrades.*` and `strategy.opentrades.*` functions (15 total) a
 | `syminfo.pointvalue` | ✅ |
 | `syminfo.currency` | ✅ |
 | `syminfo.basecurrency` | ✅ |
-| `syminfo.description` | 🔵 |
-| `syminfo.type` | 🔵 |
-| `syminfo.timezone` | 🔵 |
+| `syminfo.description` | ✅ |
+| `syminfo.type` | ✅ |
+| `syminfo.timezone` | ✅ |
+| `syminfo.session` | ✅ |
+| `syminfo.volumetype` | ✅ |
 
 ---
 
@@ -908,7 +960,6 @@ The following categories are entirely **not yet implemented** (🔴):
 - **Map** — `map.*`
 - **Matrix** — `matrix.*`
 - **Runtime** — `runtime.error()`
-- **Date/Time functions** — `dayofmonth()`, `hour()`, `timestamp()`, etc.
 - **Display constants** — `display.*`
 - **Format constants** — `format.*`
 - **Location constants** — `location.*`
