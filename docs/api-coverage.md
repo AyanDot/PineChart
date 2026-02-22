@@ -6,12 +6,12 @@ nav_order: 4
 
 # Pine Script API Coverage
 
-PineChart implements **338 out of 701** Pine Script v5/v6 API functions (~48%).
+PineChart implements **511 out of 768** Pine Script v5/v6 API functions (~66%).
 
 **Legend:**
-- ✅ Implemented (338)
-- 🔵 Planned (175)
-- 🔴 Not Yet Implemented (175)
+- ✅ Implemented (511)
+- 🔵 Planned (59)
+- 🔴 Not Yet Implemented (196)
 - 🟡 Partial (2)
 
 ---
@@ -71,9 +71,9 @@ PineChart implements **338 out of 701** Pine Script v5/v6 API functions (~48%).
 
 | Function | Status | Description |
 |:---------|:-------|:------------|
-| `array.binary_search()` | 🔵 | Binary search |
-| `array.binary_search_leftmost()` | 🔵 | Binary search (leftmost) |
-| `array.binary_search_rightmost()` | 🔵 | Binary search (rightmost) |
+| `array.binary_search()` | ✅ | Binary search |
+| `array.binary_search_leftmost()` | ✅ | Binary search (leftmost) |
+| `array.binary_search_rightmost()` | ✅ | Binary search (rightmost) |
 | `array.includes()` | ✅ | Check if value exists |
 | `array.indexof()` | ✅ | Find first index of value |
 | `array.lastindexof()` | ✅ | Find last index of value |
@@ -97,19 +97,19 @@ PineChart implements **338 out of 701** Pine Script v5/v6 API functions (~48%).
 
 | Function | Status | Description |
 |:---------|:-------|:------------|
-| `array.percentile_linear_interpolation()` | 🔵 | Percentile (Linear) |
-| `array.percentile_nearest_rank()` | 🔵 | Percentile (Nearest Rank) |
-| `array.percentrank()` | 🔵 | Percentile rank |
+| `array.percentile_linear_interpolation()` | ✅ | Percentile (Linear) |
+| `array.percentile_nearest_rank()` | ✅ | Percentile (Nearest Rank) |
+| `array.percentrank()` | ✅ | Percentile rank |
 
 ### Transformation
 
 | Function | Status | Description |
 |:---------|:-------|:------------|
 | `array.abs()` | ✅ | Absolute values |
-| `array.join()` | 🔵 | Join to string |
+| `array.join()` | ✅ | Join to string |
 | `array.sort()` | ✅ | Sort array |
-| `array.sort_indices()` | 🔵 | Get sorted indices |
-| `array.standardize()` | 🔵 | Standardize elements |
+| `array.sort_indices()` | ✅ | Get sorted indices |
+| `array.standardize()` | ✅ | Standardize elements |
 
 ### Logical
 
@@ -232,8 +232,8 @@ PineChart implements **338 out of 701** Pine Script v5/v6 API functions (~48%).
 |:---------|:-------|:------------|
 | `box.new()` | ✅ | Create new box |
 | `box.delete()` | ✅ | Delete box |
-| `box.all` | 🔵 | All boxes collection |
-| `box.copy()` | 🔵 | Copy box |
+| `box.all` | ✅ | All boxes collection |
+| `box.copy()` | ✅ | Copy box |
 
 ### Getters
 
@@ -250,7 +250,7 @@ PineChart implements **338 out of 701** Pine Script v5/v6 API functions (~48%).
 |:---------|:-------|:------------|
 | `box.set_bgcolor()` | ✅ | Set background color |
 | `box.set_border_color()` | ✅ | Set border color |
-| `box.set_border_style()` | 🔵 | Set border style |
+| `box.set_border_style()` | ✅ | Set border style |
 | `box.set_border_width()` | ✅ | Set border width |
 | `box.set_bottom()` | ✅ | Set bottom coordinate |
 | `box.set_left()` | ✅ | Set left coordinate |
@@ -258,9 +258,9 @@ PineChart implements **338 out of 701** Pine Script v5/v6 API functions (~48%).
 | `box.set_right()` | ✅ | Set right coordinate |
 | `box.set_rightbottom()` | ✅ | Set right-bottom point |
 | `box.set_top()` | ✅ | Set top coordinate |
-| `box.set_text()` | 🔵 | Set text |
-| `box.set_text_color()` | 🔵 | Set text color |
-| `box.set_extend()` | 🔵 | Set extend mode |
+| `box.set_text()` | ✅ | Set text |
+| `box.set_text_color()` | ✅ | Set text color |
+| `box.set_extend()` | ✅ | Set extend mode |
 
 ---
 
@@ -566,13 +566,13 @@ All matrix functions (40+) are **not yet implemented** (🔴). This includes cre
 |:---------|:-------|:------------|
 | `plot()` | ✅ | Plot a series |
 | `hline()` | ✅ | Horizontal line |
-| `plotchar()` | 🔴 | Plot character markers |
-| `plotshape()` | 🔴 | Plot shape markers |
+| `plotchar()` | ✅ | Plot character markers |
+| `plotshape()` | ✅ | Plot shape markers |
 | `plotarrow()` | 🔴 | Plot arrow markers |
 | `plotbar()` | 🔴 | Plot bar chart |
 | `plotcandle()` | 🔴 | Plot candlestick chart |
-| `barcolor()` | 🔴 | Set bar color |
-| `bgcolor()` | 🔴 | Set background color |
+| `barcolor()` | ✅ | Set bar color |
+| `bgcolor()` | ✅ | Set background color |
 
 ---
 
@@ -676,7 +676,7 @@ All matrix functions (40+) are **not yet implemented** (🔴). This includes cre
 
 ### Trade History Functions
 
-All `strategy.closedtrades.*` and `strategy.opentrades.*` functions (15 total) are **planned** (🔵).
+All `strategy.closedtrades.*` and `strategy.opentrades.*` functions (14 total) are **planned** (🔵).
 
 ---
 
@@ -725,16 +725,17 @@ All `strategy.closedtrades.*` and `strategy.opentrades.*` functions (15 total) a
 
 | Function | Status | Description |
 |:---------|:-------|:------------|
+| `ta.vwap` | ✅ | Volume Weighted Average Price (variable) |
+| `ta.alma()` | ✅ | Arnaud Legoux MA |
 | `ta.ema()` | ✅ | Exponential Moving Average |
 | `ta.hma()` | ✅ | Hull Moving Average |
 | `ta.linreg()` | ✅ | Linear Regression |
 | `ta.rma()` | ✅ | Rolling Moving Average |
 | `ta.sma()` | ✅ | Simple Moving Average |
 | `ta.swma()` | ✅ | Symmetrically Weighted MA |
+| `ta.vwap()` | ✅ | Volume Weighted Average Price |
 | `ta.vwma()` | ✅ | Volume Weighted MA |
 | `ta.wma()` | ✅ | Weighted Moving Average |
-| `ta.alma()` | 🔵 | Arnaud Legoux MA |
-| `ta.vwap()` | 🔵 | Volume Weighted Average Price |
 
 ### Oscillators & Momentum
 
@@ -743,15 +744,15 @@ All `strategy.closedtrades.*` and `strategy.opentrades.*` functions (15 total) a
 | `ta.cci()` | ✅ | Commodity Channel Index |
 | `ta.change()` | ✅ | Price Change |
 | `ta.cmo()` | ✅ | Chande Momentum Oscillator |
+| `ta.cog()` | ✅ | Center of Gravity |
 | `ta.macd()` | ✅ | MACD |
+| `ta.mfi()` | ✅ | Money Flow Index |
 | `ta.mom()` | ✅ | Momentum |
 | `ta.roc()` | ✅ | Rate of Change |
 | `ta.rsi()` | ✅ | Relative Strength Index |
 | `ta.stoch()` | ✅ | Stochastic |
+| `ta.tsi()` | ✅ | True Strength Index |
 | `ta.wpr()` | ✅ | Williams %R |
-| `ta.cog()` | 🔵 | Center of Gravity |
-| `ta.mfi()` | 🔵 | Money Flow Index |
-| `ta.tsi()` | 🔵 | True Strength Index |
 
 ### Volatility & Range
 
@@ -760,11 +761,27 @@ All `strategy.closedtrades.*` and `strategy.opentrades.*` functions (15 total) a
 | `ta.tr` | ✅ | True Range (variable) |
 | `ta.atr()` | ✅ | Average True Range |
 | `ta.bb()` | ✅ | Bollinger Bands |
+| `ta.bbw()` | ✅ | Bollinger Bands Width |
+| `ta.dev()` | ✅ | Mean Absolute Deviation |
+| `ta.kc()` | ✅ | Keltner Channels |
+| `ta.kcw()` | ✅ | Keltner Channels Width |
+| `ta.range()` | ✅ | Range |
 | `ta.stdev()` | ✅ | Standard Deviation |
+| `ta.tr()` | ✅ | True Range (function) |
 | `ta.variance()` | ✅ | Variance |
-| `ta.bbw()` | 🔵 | Bollinger Bands Width |
-| `ta.kc()` | 🔵 | Keltner Channels |
-| `ta.dev()` | 🔵 | Mean Absolute Deviation |
+
+### Volume Indicators
+
+| Function | Status | Description |
+|:---------|:-------|:------------|
+| `ta.accdist` | ✅ | Accumulation/Distribution (variable) |
+| `ta.iii` | ✅ | Intraday Intensity Index (variable) |
+| `ta.nvi` | ✅ | Negative Volume Index (variable) |
+| `ta.obv` | ✅ | On-Balance Volume (variable) |
+| `ta.pvi` | ✅ | Positive Volume Index (variable) |
+| `ta.pvt` | ✅ | Price-Volume Trend (variable) |
+| `ta.wad` | ✅ | Williams Accumulation/Distribution (variable) |
+| `ta.wvad` | ✅ | Williams Variable Accumulation/Distribution (variable) |
 
 ### Trend Analysis
 
@@ -785,9 +802,16 @@ All `strategy.closedtrades.*` and `strategy.opentrades.*` functions (15 total) a
 |:---------|:-------|:------------|
 | `ta.correlation()` | ✅ | Correlation Coefficient |
 | `ta.highest()` | ✅ | Highest Value |
+| `ta.highestbars()` | ✅ | Bars Since Highest |
 | `ta.lowest()` | ✅ | Lowest Value |
-| `ta.highestbars()` | 🔵 | Bars Since Highest |
-| `ta.lowestbars()` | 🔵 | Bars Since Lowest |
+| `ta.lowestbars()` | ✅ | Bars Since Lowest |
+| `ta.max()` | ✅ | Maximum Value |
+| `ta.median()` | ✅ | Median Value |
+| `ta.min()` | ✅ | Minimum Value |
+| `ta.mode()` | ✅ | Mode Value |
+| `ta.percentile_linear_interpolation()` | ✅ | Percentile (Linear) |
+| `ta.percentile_nearest_rank()` | ✅ | Percentile (Nearest Rank) |
+| `ta.percentrank()` | ✅ | Percentile Rank |
 
 ### Utility
 
@@ -795,6 +819,7 @@ All `strategy.closedtrades.*` and `strategy.opentrades.*` functions (15 total) a
 |:---------|:-------|:------------|
 | `ta.barssince()` | ✅ | Bars Since Condition |
 | `ta.cum()` | ✅ | Cumulative Sum |
+| `ta.rci()` | ✅ | Rank Correlation Index |
 | `ta.valuewhen()` | ✅ | Value When Condition Met |
 
 ### Support & Resistance
@@ -803,24 +828,40 @@ All `strategy.closedtrades.*` and `strategy.opentrades.*` functions (15 total) a
 |:---------|:-------|:------------|
 | `ta.pivothigh()` | ✅ | Pivot High |
 | `ta.pivotlow()` | ✅ | Pivot Low |
-| `ta.pivot_point_levels()` | 🔵 | Pivot Point Levels |
+| `ta.pivot_point_levels()` | ✅ | Pivot Point Levels |
 
 ---
 
 ## 21. Timeframe
+
+### Type Checks
 
 | Property | Status |
 |:---------|:-------|
 | `timeframe.isdaily` | ✅ |
 | `timeframe.isdwm` | ✅ |
 | `timeframe.isintraday` | ✅ |
-| `timeframe.ismonthly` | ✅ |
-| `timeframe.isweekly` | ✅ |
-| `timeframe.multiplier` | ✅ |
-| `timeframe.period` | ✅ |
 | `timeframe.isminutes` | ✅ |
+| `timeframe.ismonthly` | ✅ |
 | `timeframe.isseconds` | ✅ |
 | `timeframe.isticks` | ✅ |
+| `timeframe.isweekly` | ✅ |
+
+### Properties
+
+| Property | Status |
+|:---------|:-------|
+| `timeframe.main_period` | 🔴 |
+| `timeframe.multiplier` | ✅ |
+| `timeframe.period` | ✅ |
+
+### Functions
+
+| Function | Status |
+|:---------|:-------|
+| `timeframe.change()` | ✅ |
+| `timeframe.from_seconds()` | 🔴 |
+| `timeframe.in_seconds()` | ✅ |
 
 ---
 

@@ -8,7 +8,7 @@
   <!-- Primary Meta Tags -->
   <title>PineChart — Run Pine Script Indicators & Strategies in MetaTrader 5</title>
   <meta name="description"
-    content="PineChart lets you run Pine Script indicators and strategies directly inside MetaTrader 5. No manual conversion to MQL5 required. Modern TradingView-style charting, 338+ Pine Script functions supported.">
+    content="PineChart lets you run Pine Script indicators and strategies directly inside MetaTrader 5. No manual conversion to MQL5 required. Modern TradingView-style charting, 511+ Pine Script functions supported.">
   <meta name="keywords"
     content="Pine Script MetaTrader 5, run Pine Script in MT5, Pine Script indicator in MT5, convert Pine Script to MQL5, TradingView MT5, Pine Script EA, MQL5 Pine Script, PineChart">
 
@@ -50,8 +50,8 @@
       "Run Pine Script indicators in MetaTrader 5",
       "Run Pine Script strategies with live trading via MQL5 CTrade",
       "Modern TradingView-style charting interface",
-      "338+ Pine Script functions implemented (48% of full API)",
-      "37+ technical analysis functions across 6 categories",
+      "511+ Pine Script functions implemented (66% of full API)",
+      "69 technical analysis functions across 8 categories",
       "Drawing objects: line, label, box, hline with handle-based pool",
       "Multi-indicator support: run N Pine Script indicators simultaneously",
       "Multi-timeframe data via request.security()",
@@ -81,7 +81,7 @@
         "name": "Can I run Pine Script indicators in MetaTrader 5?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. PineChart is an MQL5 Expert Advisor that runs Pine Script indicators directly inside MetaTrader 5. You paste your Pine Script source file into the MT5 Files directory, type the filename in the EA input, and PineChart's built-in interpreter executes the script on every bar — no manual conversion to MQL5 is needed. It currently supports 338 out of 701 Pine Script functions (approximately 48% of the full API), including moving averages, oscillators, drawing objects, and more."
+          "text": "Yes. PineChart is an MQL5 Expert Advisor that runs Pine Script indicators directly inside MetaTrader 5. You paste your Pine Script source file into the MT5 Files directory, type the filename in the EA input, and PineChart's built-in interpreter executes the script on every bar — no manual conversion to MQL5 is needed. It currently supports 511 out of 768 Pine Script functions (approximately 66% of the full API), including moving averages, oscillators, drawing objects, and more."
         }
       },
       {
@@ -97,7 +97,7 @@
         "name": "What Pine Script functions and built-ins does PineChart support?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "PineChart currently implements 338 out of 701 Pine Script v5/v6 API functions (approximately 48%). This includes: 37+ technical analysis functions (SMA, EMA, RSI, MACD, Bollinger Bands, Stochastic, SuperTrend, Parabolic SAR, DMI, and more), 30+ array functions, 16 string functions, 14 input types, full strategy order functions (entry, close, exit, cancel), drawing objects (line, label, box, hline), tables, request.security() for multi-timeframe data, user-defined types and functions, and all control flow (if/else, for, while, switch, var/varip). See the full API coverage tracker on this page for a category-by-category breakdown."
+          "text": "PineChart currently implements 511 out of 768 Pine Script v5/v6 API functions (approximately 66%). This includes: 69 technical analysis functions (SMA, EMA, RSI, MACD, Bollinger Bands, Stochastic, SuperTrend, Parabolic SAR, DMI, and more), 47 array functions, 16 string functions, and all 14 input types, full strategy order functions (entry, close, exit, cancel), drawing objects (line, label, box, hline), tables, request.security() for multi-timeframe data, user-defined types and functions, and all control flow (if/else, for, while, switch, var/varip). See the full API coverage tracker on this page for a category-by-category breakdown."
         }
       },
       {
@@ -113,7 +113,7 @@
         "name": "How is PineChart different from manually porting code to MQL5?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Manual porting means rewriting every Pine Script line in MQL5 — a different language with different data models, no series semantics, and no built-in TA library. This takes hours or days per indicator, requires MQL5 expertise, and you have to redo the work every time the original Pine Script changes. PineChart eliminates all of that: drop in your Pine Script source file and it runs as-is. The built-in interpreter faithfully reproduces Pine Script's per-bar execution model, NA propagation, series reverse-access semantics, and 338+ built-in functions. You also get a modern TradingView-style charting UI for free."
+          "text": "Manual porting means rewriting every Pine Script line in MQL5 — a different language with different data models, no series semantics, and no built-in TA library. This takes hours or days per indicator, requires MQL5 expertise, and you have to redo the work every time the original Pine Script changes. PineChart eliminates all of that: drop in your Pine Script source file and it runs as-is. The built-in interpreter faithfully reproduces Pine Script's per-bar execution model, NA propagation, series reverse-access semantics, and 511+ implemented Pine API functions/features. You also get a modern TradingView-style charting UI for free."
         }
       },
       {
@@ -137,7 +137,7 @@
         "name": "What happens with Pine Script functions that aren't supported yet?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "If your Pine Script calls a function that PineChart hasn't implemented yet, the interpreter will log a message in the Experts tab identifying the unsupported function. Unsupported functions typically return na (not available) or 0, depending on context, so the rest of your script continues to execute. The API is actively being expanded — currently at 48% coverage (338 of 701 functions) with regular updates adding new namespaces and built-ins."
+          "text": "If your Pine Script calls a function that PineChart hasn't implemented yet, the interpreter will log a message in the Experts tab identifying the unsupported function. Unsupported functions typically return na (not available) or 0, depending on context, so the rest of your script continues to execute. The API is actively being expanded — currently at 66% coverage (511 of 768 functions) with regular updates adding new namespaces and built-ins."
         }
       },
       {
@@ -199,7 +199,7 @@
         <p class="hero-subtitle">
           PineChart lets you run Pine Script in MT5 — indicators and strategies, no manual conversion to MQL5 required.
           The easiest way to use Pine Script MetaTrader 5 traders have been asking for: modern TradingView-style
-          charting, 338+ built-in functions, one-click setup.
+          charting, 511+ implemented Pine API functions/features, one-click setup.
         </p>
         <div class="hero-buttons">
           <a href="https://www.mql5.com/en/market/product/164682" class="btn btn-primary">Get PineChart on MQL5</a>
@@ -229,7 +229,7 @@
                 into a
                 <code>.txt</code> file. PineChart's interpreter supports Pine Script v5/v6 syntax — if/else, for/while
                 loops, var/varip,
-                user-defined functions and types, and 338+ built-in functions. You can run any Pine Script indicator in
+                user-defined functions and types, and 511+ implemented Pine API functions/features. You can run any Pine Script indicator in
                 MT5
                 that uses supported API calls.
               </p>
@@ -366,7 +366,7 @@
           </article>
 
           <article class="feature-card reveal" style="--i:1">
-            <h3>37+ Technical Analysis Functions</h3>
+            <h3>69 Technical Analysis Functions</h3>
             <p>SMA, EMA, RSI, MACD, Bollinger Bands, Stochastic, SuperTrend, Parabolic SAR, DMI, CCI, ATR, and more —
               all computed per-bar with correct Pine Script warmup and NA handling.</p>
           </article>
@@ -405,26 +405,26 @@
       <div class="container">
         <header class="section-header reveal">
           <h2>Pine Script API Coverage in MT5</h2>
-          <p>PineChart implements 338 out of 701 Pine Script v5/v6 API functions — approximately 48% of the full Pine
+          <p>PineChart implements 511 out of 768 Pine Script v5/v6 API functions — approximately 66% of the full Pine
             Script MetaTrader 5 specification, with new functions added every week.</p>
         </header>
 
         <!-- Headline stats -->
         <div class="api-stats stagger">
           <div class="stat-card reveal" style="--i:0">
-            <div class="stat-number gradient-text" data-target="338">0</div>
+            <div class="stat-number gradient-text" data-target="511">0</div>
             <div class="stat-label">Functions Implemented</div>
           </div>
           <div class="stat-card reveal" style="--i:1">
-            <div class="stat-number gradient-text" data-target="701">0</div>
+            <div class="stat-number gradient-text" data-target="768">0</div>
             <div class="stat-label">Total Pine API Functions</div>
           </div>
           <div class="stat-card reveal" style="--i:2">
-            <div class="stat-number gradient-text" data-target="48">0</div>
+            <div class="stat-number gradient-text" data-target="66">0</div>
             <div class="stat-label">Percent Implemented</div>
           </div>
           <div class="stat-card reveal" style="--i:3">
-            <div class="stat-number gradient-text" data-target="37">0</div>
+            <div class="stat-number gradient-text" data-target="69">0</div>
             <div class="stat-label">TA Functions</div>
           </div>
         </div>
@@ -434,23 +434,23 @@
           <div class="category-row">
             <span class="category-name">Array</span>
             <div class="progress-bar">
-              <div class="progress-fill" data-width="77"></div>
+              <div class="progress-fill" data-width="85"></div>
             </div>
-            <span class="category-pct">77%</span>
+            <span class="category-pct">85%</span>
           </div>
           <div class="category-row">
             <span class="category-name">Technical Analysis</span>
             <div class="progress-bar">
-              <div class="progress-fill" data-width="50"></div>
+              <div class="progress-fill" data-width="100"></div>
             </div>
-            <span class="category-pct">50%</span>
+            <span class="category-pct">100%</span>
           </div>
           <div class="category-row">
             <span class="category-name">String</span>
             <div class="progress-bar">
-              <div class="progress-fill" data-width="88"></div>
+              <div class="progress-fill" data-width="89"></div>
             </div>
-            <span class="category-pct">88%</span>
+            <span class="category-pct">89%</span>
           </div>
           <div class="category-row">
             <span class="category-name">Input</span>
@@ -462,37 +462,37 @@
           <div class="category-row">
             <span class="category-name">Strategy</span>
             <div class="progress-bar">
-              <div class="progress-fill" data-width="60"></div>
+              <div class="progress-fill" data-width="54"></div>
             </div>
-            <span class="category-pct">60%</span>
+            <span class="category-pct">54%</span>
           </div>
           <div class="category-row">
             <span class="category-name">Drawing / Tables</span>
             <div class="progress-bar">
-              <div class="progress-fill" data-width="55"></div>
+              <div class="progress-fill" data-width="77"></div>
             </div>
-            <span class="category-pct">55%</span>
+            <span class="category-pct">77%</span>
           </div>
           <div class="category-row">
             <span class="category-name">Control Flow</span>
             <div class="progress-bar">
-              <div class="progress-fill" data-width="95"></div>
+              <div class="progress-fill" data-width="94"></div>
             </div>
-            <span class="category-pct">95%</span>
+            <span class="category-pct">94%</span>
           </div>
           <div class="category-row">
             <span class="category-name">Barstate / Syminfo</span>
             <div class="progress-bar">
-              <div class="progress-fill" data-width="95"></div>
+              <div class="progress-fill" data-width="100"></div>
             </div>
-            <span class="category-pct">95%</span>
+            <span class="category-pct">100%</span>
           </div>
           <div class="category-row">
             <span class="category-name">Math</span>
             <div class="progress-bar">
-              <div class="progress-fill" data-width="92"></div>
+              <div class="progress-fill" data-width="100"></div>
             </div>
-            <span class="category-pct">92%</span>
+            <span class="category-pct">100%</span>
           </div>
           <div class="category-row">
             <span class="category-name">Color</span>
@@ -577,7 +577,7 @@
               </tr>
               <tr>
                 <td>Works with any Pine Script</td>
-                <td class="highlight"><span class="partial">~</span> 48% API (growing)</td>
+                <td class="highlight"><span class="partial">~</span> 66% API (growing)</td>
                 <td><span class="check">✓</span> Full (if skilled)</td>
                 <td><span class="check">✓</span> Depends on developer</td>
               </tr>
@@ -648,7 +648,7 @@
                 Yes. PineChart is an MQL5 Expert Advisor that runs Pine Script indicators directly inside MetaTrader 5.
                 You paste your Pine Script source file into the MT5 Files directory, type the filename in the EA input,
                 and PineChart's built-in interpreter executes the script on every bar — no manual conversion to MQL5 is
-                needed. It currently supports 338 out of 701 Pine Script functions (approximately 48% of the full API),
+                needed. It currently supports 511 out of 768 Pine Script functions (approximately 66% of the full API),
                 including moving averages, oscillators, drawing objects, and more.
               </div>
             </div>
@@ -681,9 +681,9 @@
             </button>
             <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
               <div class="faq-answer-inner" itemprop="text">
-                PineChart currently implements 338 out of 701 Pine Script v5/v6 API functions (approximately 48%). This
-                includes: 37+ technical analysis functions (SMA, EMA, RSI, MACD, Bollinger Bands, Stochastic,
-                SuperTrend, Parabolic SAR, DMI, CCI, ATR, and more), 30+ array functions, 16 string functions, 14 input
+                PineChart currently implements 511 out of 768 Pine Script v5/v6 API functions (approximately 66%). This
+                includes: 69 technical analysis functions (SMA, EMA, RSI, MACD, Bollinger Bands, Stochastic,
+                SuperTrend, Parabolic SAR, DMI, CCI, ATR, and more), 47 array functions, 16 string functions, and all 14 input
                 types, full strategy order functions (entry, close, exit, cancel), drawing objects (line, label, box,
                 hline), tables, request.security() for multi-timeframe data, user-defined types and functions, and all
                 control flow (if/else, for, while, switch, var/varip). See the API coverage section above for a
@@ -724,7 +724,7 @@
                 requires MQL5 expertise, and you have to redo the work every time the original Pine Script changes.
                 PineChart eliminates all of that: drop in your Pine Script source file and it runs as-is. The built-in
                 interpreter faithfully reproduces Pine Script's per-bar execution model, NA propagation, series
-                reverse-access semantics, and 338+ built-in functions. You also get a modern TradingView-style charting
+                reverse-access semantics, and 511+ implemented Pine API functions/features. You also get a modern TradingView-style charting
                 UI for free.
               </div>
             </div>
@@ -777,7 +777,7 @@
                 If your Pine Script calls a function that PineChart hasn't implemented yet, the interpreter will log a
                 message in the Experts tab identifying the unsupported function. Unsupported functions typically return
                 na (not available) or 0, depending on context, so the rest of your script continues to execute. The API
-                is actively being expanded — currently at 48% coverage (338 of 701 functions) with regular updates
+                is actively being expanded — currently at 66% coverage (511 of 768 functions) with regular updates
                 adding new namespaces and built-ins.
               </div>
             </div>
