@@ -11,7 +11,7 @@ has_children: false
 PineChart is an MQL5 Expert Advisor that runs Pine Script indicators and strategies directly inside MetaTrader 5. No manual conversion to MQL5 required.
 
 {: .note }
-PineChart currently implements **511 out of 768** Pine Script v5/v6 API functions (~66%), with new functions added every week.
+PineChart currently implements **609 out of 768** Pine Script v5/v6 API functions (~79%), with new functions added every week.
 
 ---
 
@@ -44,7 +44,7 @@ PineChart currently implements **511 out of 768** Pine Script v5/v6 API function
 - User-defined functions with default/named arguments
 - User-defined types (UDTs) with fields, methods, and chained access
 - 69 technical analysis functions (SMA, EMA, RSI, MACD, Bollinger Bands, SuperTrend, and more)
-- 47 array functions, 16 string functions, and all 14 input types
+- 47 array functions, 17 string functions, and all 14 input types
 - Drawing objects: `line`, `label`, `box`, `hline` with handle-based pool
 - Tables with 9 screen positions and auto-sized cells
 - Plot styles: line, histogram, columns, circles, cross with per-bar dynamic colors

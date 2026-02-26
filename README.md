@@ -9,7 +9,7 @@
 ## Key Features
 
 - **Full Pine Script Interpreter** — Built-in lexer, parser, and per-bar execution engine for Pine Script v5/v6
-- **511+ Functions Implemented** — 66% of the Pine Script API and growing (69 TA functions, 47 array functions, 16 string functions, all 14 input types, strategy orders, math, color, date/time, and more)
+- **609+ Functions Implemented** — 79% of the Pine Script API and growing (69 TA functions, 47 array functions, 17 string functions, all 14 input types, strategy orders, math, color, date/time, and more)
 - **Modern TradingView-Style Charts** — Full-canvas rendering with candlesticks, OHLC, line, area, Heiken Ashi, crosshair, zoom, and pan
 - **Strategy Trading** — Pine Script strategies execute real orders through MQL5's CTrade library
 - **Drawing Objects & Tables** — Lines, labels, boxes, hlines with handle-based pools; screen-anchored tables with 9 positions
@@ -30,17 +30,17 @@
 |----------|----------|
 | Array | 85% |
 | Technical Analysis | 100% |
-| String | 89% |
+| String | 94% |
 | Input | 100% |
 | Strategy | 54% |
-| Drawing / Tables | 77% |
-| Control Flow | 94% |
+| Drawing / Tables | 87% |
+| Control Flow | 100% |
 | Barstate / Syminfo | 100% |
 | Math | 100% |
 | Color | 100% |
-| Date / Time | 85% |
+| Date / Time | 86% |
 
-**511 / 768** total Pine Script v5/v6 functions implemented (~66%).
+**609 / 768** total Pine Script v5/v6 functions implemented (~79%).
 
 ## Website
 

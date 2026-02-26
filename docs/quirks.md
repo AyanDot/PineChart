@@ -41,19 +41,9 @@ prevSma = currentSma[1]
 
 ---
 
-## `for item in array` — Parsed but Not Executable
+## `for item in array` Support
 
-The `for item in collection` loop syntax is parsed by the engine but runtime iteration over arrays is not yet implemented. Use index-based `for` loops instead:
-
-```
-// This does NOT work yet:
-for item in myArray
-    sum += item
-
-// Workaround: use index-based loop
-for i = 0 to array.size(myArray) - 1
-    sum += array.get(myArray, i)
-```
+The `for item in collection` loop syntax is supported for arrays. You can use either `for item in array` or index-based loops depending on your script style.
 
 ---
 
@@ -123,7 +113,7 @@ array.push(myArr, 5)
 - **Strategies recalculate per-tick; indicators do not.** On the latest bar, strategies re-execute on every incoming tick so they can react to intrabar price changes and submit orders in real time. Indicators only execute once per confirmed bar. This means `barstate.isrealtime` fires multiple times per bar in a strategy but effectively once in an indicator.
 - Strategies use MQL5's CTrade for order execution — filling modes and order types depend on your broker
 - `strategy.exit()` trailing stop is not yet supported
-- `strategy.closedtrades.*` and `strategy.opentrades.*` history functions (~30 functions) are planned but not yet implemented
+- `strategy.closedtrades.*` and `strategy.opentrades.*` history functions (14 functions) are planned but not yet implemented
 - Backtesting uses MT5's built-in Strategy Tester (no custom backtester)
 
 ---
@@ -148,5 +138,4 @@ For the full function-by-function status, see the [API Coverage](api-coverage) p
 - **Polyline** — `polyline.*` (3 functions)
 - **Log** — `log.*` (3 functions)
 - **Date/Time functions** — `dayofmonth()`, `hour()`, `timestamp()`, etc.
-- **Plot variants** — `plotchar()`, `plotshape()`, `plotarrow()`, `bgcolor()`, `barcolor()`
-- **Advanced chart types** — Renko, Kagi, Point & Figure, Range
+- **Plot variants** — `plotarrow()`, `plotbar()`, `plotcandle()`

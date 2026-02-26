@@ -6,13 +6,13 @@ nav_order: 4
 
 # Pine Script API Coverage
 
-PineChart implements **511 out of 768** Pine Script v5/v6 API functions (~66%).
+PineChart implements **609 out of 768** Pine Script v5/v6 API functions (~79%).
 
 **Legend:**
-- ✅ Implemented (511)
-- 🔵 Planned (59)
-- 🔴 Not Yet Implemented (196)
-- 🟡 Partial (2)
+- ✅ Implemented (609)
+- 🔵 Planned (42)
+- 🔴 Not Yet Implemented (116)
+- 🟡 Partial (1)
 
 ---
 
@@ -230,6 +230,7 @@ PineChart implements **511 out of 768** Pine Script v5/v6 API functions (~66%).
 
 | Function | Status | Description |
 |:---------|:-------|:------------|
+| `box()` | ✅ | Cast `na` to box |
 | `box.new()` | ✅ | Create new box |
 | `box.delete()` | ✅ | Delete box |
 | `box.all` | ✅ | All boxes collection |
@@ -253,13 +254,22 @@ PineChart implements **511 out of 768** Pine Script v5/v6 API functions (~66%).
 | `box.set_border_style()` | ✅ | Set border style |
 | `box.set_border_width()` | ✅ | Set border width |
 | `box.set_bottom()` | ✅ | Set bottom coordinate |
+| `box.set_bottom_right_point()` | ✅ | Set bottom-right point |
 | `box.set_left()` | ✅ | Set left coordinate |
 | `box.set_lefttop()` | ✅ | Set left-top point |
 | `box.set_right()` | ✅ | Set right coordinate |
 | `box.set_rightbottom()` | ✅ | Set right-bottom point |
 | `box.set_top()` | ✅ | Set top coordinate |
+| `box.set_top_left_point()` | ✅ | Set top-left point |
 | `box.set_text()` | ✅ | Set text |
 | `box.set_text_color()` | ✅ | Set text color |
+| `box.set_text_font_family()` | ✅ | Set text font family |
+| `box.set_text_formatting()` | ✅ | Set text formatting |
+| `box.set_text_halign()` | ✅ | Set text horizontal alignment |
+| `box.set_text_size()` | ✅ | Set text size |
+| `box.set_text_valign()` | ✅ | Set text vertical alignment |
+| `box.set_text_wrap()` | ✅ | Set text wrapping |
+| `box.set_xloc()` | ✅ | Set x-location |
 | `box.set_extend()` | ✅ | Set extend mode |
 
 ---
@@ -323,7 +333,7 @@ PineChart implements **511 out of 768** Pine Script v5/v6 API functions (~66%).
 |:--------|:-------|:------|
 | `for i = start to end` | ✅ | |
 | `for i = start to end by step` | ✅ | |
-| `for item in collection` | 🟡 | Parsed, runtime not ready |
+| `for item in collection` | ✅ | Array iteration supported |
 | `while` loop | ✅ | |
 | `break` | ✅ | |
 | `continue` | ✅ | |
@@ -368,8 +378,9 @@ All input types are implemented and return their default value (`defval`). No UI
 |:---------|:-------|
 | `label.new()` | ✅ |
 | `label.delete()` | ✅ |
-| `label.all` | 🔵 |
-| `label.copy()` | 🔵 |
+| `label.all` | ✅ |
+| `label` | 🔵 |
+| `label.copy()` | ✅ |
 
 ### Getters
 
@@ -388,14 +399,16 @@ All input types are implemented and return their default value (`defval`). No UI
 | `label.set_style()` | ✅ |
 | `label.set_text()` | ✅ |
 | `label.set_textcolor()` | ✅ |
+| `label.set_text_font_family()` | ✅ |
+| `label.set_text_formatting()` | ✅ |
 | `label.set_x()` | ✅ |
 | `label.set_xy()` | ✅ |
 | `label.set_y()` | ✅ |
-| `label.set_point()` | 🔵 |
-| `label.set_textalign()` | 🔵 |
-| `label.set_tooltip()` | 🔵 |
-| `label.set_xloc()` | 🔵 |
-| `label.set_yloc()` | 🔵 |
+| `label.set_point()` | ✅ |
+| `label.set_textalign()` | ✅ |
+| `label.set_tooltip()` | ✅ |
+| `label.set_xloc()` | ✅ |
+| `label.set_yloc()` | ✅ |
 
 ### Styles
 
@@ -406,15 +419,22 @@ All input types are implemented and return their default value (`defval`). No UI
 | `label.style_circle` | ✅ |
 | `label.style_cross` | ✅ |
 | `label.style_diamond` | ✅ |
+| `label.style_flag` | ✅ |
 | `label.style_label_center` | ✅ |
 | `label.style_label_down` | ✅ |
 | `label.style_label_left` | ✅ |
+| `label.style_label_lower_left` | 🔵 |
+| `label.style_label_lower_right` | 🔵 |
 | `label.style_label_right` | ✅ |
 | `label.style_label_up` | ✅ |
+| `label.style_label_upper_left` | 🔵 |
+| `label.style_label_upper_right` | 🔵 |
 | `label.style_none` | ✅ |
 | `label.style_square` | ✅ |
+| `label.style_text_outline` | ✅ |
 | `label.style_triangledown` | ✅ |
 | `label.style_triangleup` | ✅ |
+| `label.style_xcross` | ✅ |
 
 ---
 
@@ -426,8 +446,9 @@ All input types are implemented and return their default value (`defval`). No UI
 |:---------|:-------|
 | `line.new()` | ✅ |
 | `line.delete()` | ✅ |
-| `line.all` | 🔵 |
-| `line.copy()` | 🔵 |
+| `line.all` | ✅ |
+| `line()` | ✅ |
+| `line.copy()` | ✅ |
 
 ### Getters
 
@@ -437,7 +458,7 @@ All input types are implemented and return their default value (`defval`). No UI
 | `line.get_x2()` | ✅ |
 | `line.get_y1()` | ✅ |
 | `line.get_y2()` | ✅ |
-| `line.get_price()` | 🔵 |
+| `line.get_price()` | ✅ |
 
 ### Setters
 
@@ -445,6 +466,8 @@ All input types are implemented and return their default value (`defval`). No UI
 |:---------|:-------|
 | `line.set_color()` | ✅ |
 | `line.set_extend()` | ✅ |
+| `line.set_first_point()` | ✅ |
+| `line.set_second_point()` | ✅ |
 | `line.set_style()` | ✅ |
 | `line.set_width()` | ✅ |
 | `line.set_x1()` | ✅ |
@@ -453,7 +476,7 @@ All input types are implemented and return their default value (`defval`). No UI
 | `line.set_xy2()` | ✅ |
 | `line.set_y1()` | ✅ |
 | `line.set_y2()` | ✅ |
-| `line.set_xloc()` | 🔵 |
+| `line.set_xloc()` | ✅ |
 
 ### Styles
 
@@ -622,7 +645,7 @@ All matrix functions (40+) are **not yet implemented** (🔴). This includes cre
 
 | Function | Status |
 |:---------|:-------|
-| `str.split()` | 🔵 |
+| `str.split()` | ✅ |
 | `str.substring()` | ✅ |
 | `str.tonumber()` | ✅ |
 | `str.tostring()` | ✅ |
@@ -691,6 +714,8 @@ All `strategy.closedtrades.*` and `strategy.opentrades.*` functions (14 total) a
 | `table.cell_set_height()` | ✅ |
 | `table.cell_set_text()` | ✅ |
 | `table.cell_set_text_color()` | ✅ |
+| `table.cell_set_text_font_family()` | ✅ |
+| `table.cell_set_text_formatting()` | ✅ |
 | `table.cell_set_text_halign()` | ✅ |
 | `table.cell_set_text_size()` | ✅ |
 | `table.cell_set_text_valign()` | ✅ |
@@ -702,6 +727,8 @@ All `strategy.closedtrades.*` and `strategy.opentrades.*` functions (14 total) a
 
 | Function | Status |
 |:---------|:-------|
+| `table()` | ✅ |
+| `table.all` | ✅ |
 | `table.new()` | ✅ |
 | `table.clear()` | ✅ |
 | `table.delete()` | ✅ |
@@ -990,11 +1017,50 @@ All `strategy.closedtrades.*` and `strategy.opentrades.*` functions (14 total) a
 
 ---
 
+## 27. Chart
+
+### Chart Properties
+
+| Function | Status | Description |
+|:---------|:-------|:------------|
+| `chart.bg_color` | ✅ | Background color |
+| `chart.fg_color` | ✅ | Foreground color |
+
+### Chart Type Detection
+
+| Function | Status | Description |
+|:---------|:-------|:------------|
+| `chart.is_heikinashi` | ✅ | Check if Heikin Ashi chart |
+| `chart.is_kagi` | ✅ | Check if Kagi chart |
+| `chart.is_linebreak` | ✅ | Check if Line Break chart (always false in MT5) |
+| `chart.is_pnf` | ✅ | Check if Point & Figure chart |
+| `chart.is_range` | ✅ | Check if Range chart |
+| `chart.is_renko` | ✅ | Check if Renko chart |
+| `chart.is_standard` | ✅ | Check if standard chart |
+
+### Visible Range
+
+| Function | Status | Description |
+|:---------|:-------|:------------|
+| `chart.left_visible_bar_time` | ✅ | Left visible bar time |
+| `chart.right_visible_bar_time` | ✅ | Right visible bar time |
+
+### Chart Points
+
+| Function | Status | Description |
+|:---------|:-------|:------------|
+| `chart.point.copy()` | ✅ | Copy chart point |
+| `chart.point.from_index()` | ✅ | Create point from index |
+| `chart.point.from_time()` | ✅ | Create point from time |
+| `chart.point.new()` | ✅ | Create new chart point |
+| `chart.point.now()` | ✅ | Get current chart point |
+
+---
+
 ## Categories Not Yet Started
 
 The following categories are entirely **not yet implemented** (🔴):
 
-- **Chart** — `chart.*` (properties, type detection, visible range, chart points)
 - **Session** — `session.*` (flags, constants)
 - **Polyline** — `polyline.*`
 - **Log** — `log.*`
