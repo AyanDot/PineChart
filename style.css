@@ -547,7 +547,7 @@ section {
 
 .steps-outro {
     width: min(920px, 100%);
-    margin: var(--space-3xl) auto 0;
+    margin: var(--space-4xl) auto 0;
     text-align: center;
     padding: var(--space-2xl) var(--space-2xl);
     background: linear-gradient(135deg, rgba(59, 130, 246, 0.14), rgba(139, 92, 246, 0.12));
@@ -569,8 +569,12 @@ section {
 .steps-outro-sub {
     margin: var(--space-md) 0 0;
     font-size: clamp(1rem, 1.8vw, 1.2rem);
-    font-weight: 700;
-    color: #c4d7ff;
+    font-weight: 800;
+    color: var(--text-heading);
+    text-decoration: underline;
+    text-decoration-color: rgba(96, 165, 250, 0.95);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.22em;
 }
 
 .placeholder-img {
@@ -1081,7 +1085,7 @@ section {
     }
 
     .steps-outro {
-        margin-top: var(--space-2xl);
+        margin-top: var(--space-3xl);
         padding: var(--space-lg) var(--space-md);
     }
 
