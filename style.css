@@ -17,7 +17,7 @@
     /* Text */
     --text-primary: #e8e8f0;
     --text-secondary: #9999b8;
-    --text-muted: #6666880;
+    --text-muted: #666688;
     --text-heading: #ffffff;
 
     /* Accents */
@@ -537,16 +537,12 @@ section {
     overflow: hidden;
     background: var(--bg-card);
     border: 1px solid var(--border-card);
-    aspect-ratio: 16 / 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .step-visual img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
 }
 
 .placeholder-img {
@@ -932,10 +928,6 @@ section {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s var(--ease-out), padding 0.3s ease;
-}
-
-.faq-item.open .faq-answer {
-    max-height: 500px;
 }
 
 .faq-answer-inner {
