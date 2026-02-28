@@ -195,9 +195,8 @@
         </div>
         <h1>Run <span class="gradient-text">Pine Script</span> Inside MetaTrader 5</h1>
         <p class="hero-subtitle">
-          PineChart lets you run Pine Script in MT5 — indicators and strategies, no manual conversion to MQL5 required.
-          The easiest way to use Pine Script MetaTrader 5 traders have been asking for: modern TradingView-style
-          charting, 609+ implemented Pine API functions/features, one-click setup.
+          Bring Pine Script to MetaTrader 5 with a single file drop. Run your indicators and strategies in MT5 without
+          webhooks or code rewrites.
         </p>
         <div class="hero-buttons">
           <a href="https://www.mql5.com/en/market/product/164682" class="btn btn-primary">Get PineChart on MQL5</a>
@@ -223,13 +222,7 @@
               <div class="step-number">1</div>
               <h3>Copy Your Favourite Indicator or Strategy</h3>
               <p>
-                Find the Pine Script indicator or strategy you want to use on TradingView. Copy the full source code
-                into a
-                <code>.txt</code> file. PineChart's interpreter supports Pine Script v5/v6 syntax — if/else, for/while
-                loops, var/varip,
-                user-defined functions and types, and 609+ implemented Pine API functions/features. You can run any Pine Script indicator in
-                MT5
-                that uses supported API calls.
+                Copy the indicator or strategy code from TradingView into a <code>.txt</code> file.
               </p>
             </div>
             <div class="step-visual">
@@ -243,12 +236,7 @@
               <div class="step-number">2</div>
               <h3>Paste It Into the MT5 Files Directory</h3>
               <p>
-                Save the <code>.txt</code> file into MetaTrader 5's <strong>MQL5/Files/</strong> folder. This is where
-                PineChart looks
-                for Pine Script source files at startup. You can add as many scripts as you like — PineChart supports
-                running multiple
-                Pine Script indicators simultaneously inside MT5, each with isolated execution state. Every Pine Script
-                indicator in MT5 runs in its own execution context.
+                Save the file in your MT5 <strong>MQL5/Files</strong> folder (you can add multiple scripts).
               </p>
             </div>
             <div class="step-visual">
@@ -262,16 +250,19 @@
               <div class="step-number">3</div>
               <h3>Enter the Filename in PineChart — Done</h3>
               <p>
-                Attach PineChart to any chart and type the filename(s) in the <strong>InpIndicators</strong> input field
-                (comma-separated for multiple). PineChart's lexer tokenizes, parser builds the AST, and the interpreter
-                executes every bar — just like TradingView. Your Pine Script indicator is now running live in MetaTrader
-                5.
+                Attach PineChart, enter the filename(s) in <strong>Indicators or Strategy</strong>, and your script runs
+                live in MT5.
               </p>
             </div>
             <div class="step-visual">
               <img src="Step3.gif" alt="PineChart running a Pine Script indicator in MT5" loading="lazy">
             </div>
           </article>
+        </div>
+
+        <div class="steps-callout reveal-scale" aria-label="No webhook or rewrite required">
+          <p class="steps-callout-main">No webhook subscriptions. No freelancer porting fees. No code rewrites.</p>
+          <p class="steps-callout-sub">It's that easy.</p>
         </div>
       </div>
     </section>
