@@ -545,29 +545,32 @@ section {
     object-fit: contain;
 }
 
-.steps-callout {
+.steps-outro {
+    width: min(920px, 100%);
     margin: var(--space-3xl) auto 0;
-    max-width: 800px;
     text-align: center;
-    padding: var(--space-xl) var(--space-2xl);
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.09), rgba(139, 92, 246, 0.08));
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: var(--radius-lg);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    padding: var(--space-2xl) var(--space-2xl);
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.14), rgba(139, 92, 246, 0.12));
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: var(--radius-xl);
+    box-shadow: 0 16px 50px rgba(0, 0, 0, 0.35), 0 0 24px rgba(59, 130, 246, 0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
-.steps-callout-main {
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: var(--text-primary);
+.steps-outro-main {
     margin: 0;
+    font-size: clamp(1.25rem, 2.4vw, 1.65rem);
+    line-height: 1.45;
+    font-weight: 700;
+    color: var(--text-heading);
 }
 
-.steps-callout-sub {
-    margin: var(--space-sm) 0 0;
-    font-size: 1rem;
-    color: var(--text-secondary);
+.steps-outro-sub {
+    margin: var(--space-md) 0 0;
+    font-size: clamp(1rem, 1.8vw, 1.2rem);
+    font-weight: 700;
+    color: #c4d7ff;
 }
 
 .placeholder-img {
@@ -1077,8 +1080,13 @@ section {
         order: 0;
     }
 
-    .steps-callout {
+    .steps-outro {
+        margin-top: var(--space-2xl);
         padding: var(--space-lg) var(--space-md);
+    }
+
+    .steps-outro-main {
+        line-height: 1.5;
     }
 
     .features-grid {
