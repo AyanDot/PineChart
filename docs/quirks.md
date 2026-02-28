@@ -26,27 +26,6 @@ All `input.*` functions (14 types) are implemented but currently return their `d
 
 ---
 
-## Series Lookback on TA Results Not Supported
-
-Applying the history-reference operator `[]` to the result of a TA function call is not yet supported:
-
-```
-// This does NOT work yet:
-prevSma = ta.sma(close, 20)[1]
-
-// Workaround: store in a variable first
-currentSma = ta.sma(close, 20)
-prevSma = currentSma[1]
-```
-
----
-
-## `for item in array` Support
-
-The `for item in collection` loop syntax is supported for arrays. You can use either `for item in array` or index-based loops depending on your script style.
-
----
-
 ## NA Propagation Behavior
 
 PineChart faithfully implements Pine Script's `na` (Not Available) semantics. Be aware:
@@ -76,35 +55,6 @@ When your script calls a function that PineChart hasn't implemented yet, the int
 3. Continues executing the rest of your script
 
 Your script won't crash — it will just have missing data for unsupported calls.
-
----
-
-## Instance Method Syntax Not Supported
-
-Pine Script allows calling array methods on the object directly (e.g., `myArr.push(5)`). PineChart currently only supports the namespace form:
-
-```
-// This does NOT work yet:
-myArr.push(5)
-
-// Use this instead:
-array.push(myArr, 5)
-```
-
----
-
-## Multi-Timeframe Limitations
-
-`request.security()` currently supports:
-
-- Simple OHLCV field access (`close`, `open`, `high`, `low`, `volume`)
-- Cross-symbol data (any symbol in Market Watch)
-- Higher-timeframe alignment with `gaps` and `lookahead` control
-- Tuple returns
-
-**Not yet supported**:
-- TA expressions inside `request.security()` (e.g., `request.security(sym, tf, ta.sma(close, 20))`)
-- `request.security_lower_tf()` for lower timeframe data
 
 ---
 
