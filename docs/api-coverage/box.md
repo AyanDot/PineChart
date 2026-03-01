@@ -8,6 +8,7 @@ nav_order: 4
 ## Box
 
 ### Management
+
 | Function      | Status | Description          |
 |---------------|--------|----------------------|
 | box.all       | ✅     | All boxes collection |
@@ -18,6 +19,7 @@ nav_order: 4
 
 
 ### Getters
+
 | Function         | Status | Description           |
 |------------------|--------|-----------------------|
 | box.get_bottom() | ✅     | Get bottom coordinate |
@@ -27,6 +29,7 @@ nav_order: 4
 
 
 ### Setters
+
 | Function                     | Status | Description                   |
 |------------------------------|--------|-------------------------------|
 | box.set_bgcolor()            | ✅     | Set background color          |

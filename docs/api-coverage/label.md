@@ -8,6 +8,7 @@ nav_order: 9
 ## Label
 
 ### Styles
+
 | Function                      | Status | Description             |
 |-------------------------------|--------|-------------------------|
 | label.style_arrowdown         | ✅     | Arrow down style        |
@@ -34,6 +35,7 @@ nav_order: 9
 
 
 ### Management
+
 | Function       | Status | Description           |
 |----------------|--------|-----------------------|
 | label.all      | ✅     | All labels collection |
@@ -44,6 +46,7 @@ nav_order: 9
 
 
 ### Getters
+
 | Function         | Status | Description      |
 |------------------|--------|------------------|
 | label.get_text() | ✅     | Get label text   |
@@ -52,6 +55,7 @@ nav_order: 9
 
 
 ### Setters
+
 | Function                     | Status | Description             |
 |------------------------------|--------|-------------------------|
 | label.set_color()            | ✅     | Set label color         |

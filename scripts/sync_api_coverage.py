@@ -145,6 +145,53 @@ def _strip_trailing_divider(body: str) -> str:
     return "\n".join(lines)
 
 
+def _is_table_line(line: str) -> bool:
+    stripped = line.strip()
+    return stripped.startswith("|") and stripped.endswith("|")
+
+
+def _is_table_separator(line: str) -> bool:
+    stripped = line.strip()
+    if not _is_table_line(stripped):
+        return False
+    cells = [cell.strip() for cell in stripped.strip("|").split("|")]
+    if not cells:
+        return False
+    for cell in cells:
+        if not re.fullmatch(r":?-{3,}:?", cell):
+            return False
+    return True
+
+
+def _is_table_start(lines: Sequence[str], index: int) -> bool:
+    if index + 1 >= len(lines):
+        return False
+    return _is_table_line(lines[index]) and _is_table_separator(lines[index + 1])
+
+
+def _normalize_table_spacing(body: str) -> str:
+    lines = body.splitlines()
+    if not lines:
+        return body
+
+    out: List[str] = []
+    for index, line in enumerate(lines):
+        if _is_table_start(lines, index):
+            if out and out[-1].strip():
+                out.append("")
+
+        out.append(line.rstrip())
+
+        next_line = lines[index + 1] if index + 1 < len(lines) else ""
+        if _is_table_line(line) and next_line and not _is_table_line(next_line):
+            if next_line.strip() and (not out or out[-1].strip()):
+                out.append("")
+
+    while out and not out[-1].strip():
+        out.pop()
+    return "\n".join(out)
+
+
 def parse_sections(source_text: str) -> Dict[int, ParsedSection]:
     matches = list(SECTION_HEADER_RE.finditer(source_text))
     if not matches:
@@ -158,6 +205,7 @@ def parse_sections(source_text: str) -> Dict[int, ParsedSection]:
         body_end = matches[index + 1].start() if index + 1 < len(matches) else len(source_text)
         body = source_text[body_start:body_end].strip("\n")
         body = _strip_trailing_divider(body)
+        body = _normalize_table_spacing(body)
         if body:
             body = body.rstrip() + "\n"
         sections[number] = ParsedSection(number=number, name=name, body=body)
@@ -228,8 +276,6 @@ def render_parent(metrics: Dict[str, str], specs: Sequence[SectionSpec]) -> str:
             f"PineChart implements **{metrics['implemented']} out of {metrics['total']}** "
             f"Pine Script v5/v6 API functions ({metrics['percentage']})."
         ),
-        "",
-        "This page and all subsection pages are generated from `Pine API Tracker.md`.",
         "",
         "## Legend",
         "",

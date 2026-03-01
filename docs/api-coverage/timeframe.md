@@ -8,6 +8,7 @@ nav_order: 25
 ## Timeframe
 
 ### Timeframe Type Checks
+
 | Function             | Status | Description                   |
 |----------------------|--------|-------------------------------|
 | timeframe.isdaily    | ✅     | Check if daily timeframe      |
@@ -20,6 +21,7 @@ nav_order: 25
 | timeframe.isweekly   | ✅     | Check if weekly timeframe     |
 
 ### Timeframe Properties
+
 | Function              | Status | Description              |
 |-----------------------|--------|--------------------------|
 | timeframe.main_period | 🔴     | Main period of timeframe |
@@ -27,6 +29,7 @@ nav_order: 25
 | timeframe.period      | ✅     | Timeframe period         |
 
 ### Timeframe Functions
+
 | Function                 | Status | Description                   |
 |--------------------------|--------|-------------------------------|
 | timeframe.change()       | ✅     | Detect timeframe change (stub)|

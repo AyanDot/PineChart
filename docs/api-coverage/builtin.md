@@ -8,6 +8,7 @@ nav_order: 2
 ## Builtin
 
 ### Variables
+
 | Function        | Status  | Description                            |
 |-----------------|---------|----------------------------------------|
 | bar_index       | ✅      | Current bar index                      |
@@ -40,6 +41,7 @@ nav_order: 2
 
 
 ### Constants
+
 | Function | Status | Description   |
 |----------|--------|---------------|
 | false    | ✅      | Boolean false |
@@ -47,6 +49,7 @@ nav_order: 2
 
 
 ### Functions
+
 | Function         | Status | Description           |
 |------------------|--------|-----------------------|
 | indicator()      | ✅      | Indicator declaration |

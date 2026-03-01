@@ -8,6 +8,7 @@ nav_order: 22
 ## String
 
 ### Query
+
 | Function         | Status | Description                        |
 |------------------|--------|------------------------------------|
 | str.contains()   | ✅     | Check if string contains substring |
@@ -18,12 +19,14 @@ nav_order: 22
 | str.startswith() | ✅     | Check if string starts with prefix |
 
 ### Formatting
+
 | Function          | Status | Description                  |
 |-------------------|--------|------------------------------|
 | str.format()      | ✅     | Format string with arguments |
 | str.format_time() | ✅     | Format time value            |
 
 ### Transformation
+
 | Function          | Status | Description              |
 |-------------------|--------|--------------------------|
 | str.lower()       | ✅     | Convert to lowercase     |
@@ -34,12 +37,14 @@ nav_order: 22
 | str.upper()       | ✅     | Convert to uppercase     |
 
 ### Parsing
+
 | Function        | Status | Description             |
 |-----------------|--------|-------------------------|
 | str.split()     | ✅     | Split string into array of string handles |
 | str.substring() | ✅     | Extract substring       |
 
 ### Conversion
+
 | Function       | Status | Description             |
 |----------------|--------|-------------------------|
 | str.tonumber() | ✅     | Parse string to number  |

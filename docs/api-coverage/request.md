@@ -8,6 +8,7 @@ nav_order: 19
 ## Request
 
 ### Data Requests
+
 | Function                    | Status | Description                  |
 |-----------------------------|--------|------------------------------|
 | request.security()          | ✅     | Request security data (MVP: simple OHLCV fields) |

@@ -8,6 +8,7 @@ nav_order: 3
 ## Barstate
 
 ### Bar State Flags
+
 | Function                        | Status | Description                   |
 |---------------------------------|--------|-------------------------------|
 | barstate.isconfirmed            | ✅     | Bar is confirmed              |

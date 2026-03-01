@@ -8,8 +8,9 @@ nav_order: 1
 ## Array
 
 ### Creation & Initialization
+
 | Function                | Status   | Description                 |
-|-------------------------|---------|------------------------------| 
+|-------------------------|---------|------------------------------|
 | array.copy()            | ✅      | Create copy of array         |
 | array.from()            | ✅      | Create array from arguments  |
 | array.new_bool()        | ✅      | Create boolean array         |
@@ -25,6 +26,7 @@ nav_order: 1
 | array.new&lt;type&gt;() | 🔵      | Create typed array (generic) |
 
 ### Element Access
+
 | Function      | Status  | Description        |
 |---------------|---------|--------------------|
 | array.first() | ✅      | Get first element  |
@@ -34,6 +36,7 @@ nav_order: 1
 
 
 ### Modification
+
 | Function        | Status  | Description                  |
 |-----------------|---------|------------------------------|
 | array.clear()   | ✅      | Remove all elements          |
@@ -48,6 +51,7 @@ nav_order: 1
 
 
 ### Size & Shape
+
 | Function       | Status  | Description        |
 |----------------|---------|--------------------|
 | array.concat() | ✅      | Concatenate arrays |
@@ -56,6 +60,7 @@ nav_order: 1
 
 
 ### Search & Query
+
 | Function                        | Status  | Description               |
 |---------------------------------|---------|---------------------------|
 | array.binary_search()           | ✅      | Binary search             |
@@ -67,6 +72,7 @@ nav_order: 1
 
 
 ### Statistical
+
 | Function           | Status | Description         |
 |--------------------|--------|---------------------|
 | array.avg()        | ✅      | Average of elements |
@@ -82,6 +88,7 @@ nav_order: 1
 
 
 ### Percentiles
+
 | Function                                | Status  | Description               |
 |-----------------------------------------|---------|---------------------------|
 | array.percentile_linear_interpolation() | ✅      | Percentile (Linear)       |
@@ -90,6 +97,7 @@ nav_order: 1
 
 
 ### Transformation
+
 | Function             | Status  | Description          |
 |----------------------|---------|----------------------|
 | array.abs()          | ✅      | Absolute values      |
@@ -100,6 +108,7 @@ nav_order: 1
 
 
 ### Logical
+
 | Function      | Status | Description                  |
 |---------------|--------|------------------------------|
 | array.every() | ✅      | Check if all elements match  |

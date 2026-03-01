@@ -7,7 +7,8 @@ nav_order: 31
 
 ## Operators
 
-### Arithmetic Operators 
+### Arithmetic Operators
+
 | Operator | Status | Description|
 |----------|--------|---------------|
 | `+`      | ✅    | Addition      |
@@ -16,7 +17,8 @@ nav_order: 31
 | `/`      | ✅    |  Division     |
 | `%`      | ✅    |  Modulo       |
 
-### Comparison Operators 
+### Comparison Operators
+
 | Operator | Status | Description      |
 |----------|--------|------------------|
 | `==`     | ✅    | Equal             |
@@ -26,7 +28,8 @@ nav_order: 31
 | `>=`     | ✅    |  Greater or equal |
 | `<=`     | ✅    |  Less or equal    |
 
-### Logical Operators 
+### Logical Operators
+
 | Operator | Status | Description  |
 |----------|--------|--------------|
 | `and`    | ✅    |  Logical AND |
@@ -34,6 +37,7 @@ nav_order: 31
 | `not`    | ✅    |  Logical NOT |
 
 ### Assignment Operators
+
 | Operator | Status | Description|
 |----------|--------|---------------------|
 | `=`      | ✅    |  Assignment         |
@@ -44,6 +48,7 @@ nav_order: 31
 | `/=`     | ✅    | Divide and assign   |
 
 ### Series Operators
+
 | Operator | Status | Description |
 |----------|--------|----------|
 | `[]` (index) | ✅ | Series access |

@@ -8,6 +8,7 @@ nav_order: 6
 ## Color
 
 ### Predefined Colors
+
 | Function      | Status | Description   |
 |---------------|--------|---------------|
 | color.black   | ✅     | Black color   |
@@ -30,6 +31,7 @@ nav_order: 6
 
 
 ### Color Functions
+
 | Function              | Status | Description                  |
 |-----------------------|--------|------------------------------|
 | color.new()           | ✅     | Create new color with transparency |

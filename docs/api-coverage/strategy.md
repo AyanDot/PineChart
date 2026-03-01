@@ -8,11 +8,13 @@ nav_order: 27
 ## Strategy
 
 ### Declaration
+
 | Function     | Status | Description                                    |
 |--------------|--------|------------------------------------------------|
 | strategy()   | ✅     | Strategy declaration (title, overlay, qty, etc.) |
 
 ### Order Functions
+
 | Function                | Status | Description                              |
 |-------------------------|--------|------------------------------------------|
 | strategy.entry()        | ✅     | Submit entry order (via CTrade)           |
@@ -24,6 +26,7 @@ nav_order: 27
 | strategy.cancel_all()   | ✅     | Cancel all pending orders                |
 
 ### Properties
+
 | Function                       | Status | Description                         |
 |--------------------------------|--------|-------------------------------------|
 | strategy.position_size         | ✅     | Current position size               |
@@ -41,12 +44,14 @@ nav_order: 27
 | strategy.max_drawdown          | 🔵     | Maximum drawdown                    |
 
 ### Constants
+
 | Function         | Status | Description     |
 |------------------|--------|-----------------|
 | strategy.long    | ✅     | Long direction  |
 | strategy.short   | ✅     | Short direction |
 
 ### Trade History Functions
+
 | Function                             | Status | Description                      |
 |--------------------------------------|--------|----------------------------------|
 | strategy.closedtrades.entry_bar_index() | 🔵  | Entry bar of closed trade        |

@@ -8,6 +8,7 @@ nav_order: 18
 ## Polyline
 
 ### Other
+
 | Function          | Status | Description              |
 |-------------------|--------|--------------------------|
 | polyline.all      | 🔴     | All polylines collection |

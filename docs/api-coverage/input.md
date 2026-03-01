@@ -8,6 +8,7 @@ nav_order: 8
 ## Input
 
 ### Input Types
+
 | Function          | Status | Description       |
 |-------------------|--------|-------------------|
 | input()           | ✅     | Generic input (returns defval) |

@@ -8,6 +8,7 @@ nav_order: 14
 ## Math
 
 ### Constants
+
 | Function  | Status | Description                           |
 |-----------|--------|---------------------------------------|
 | math.e    | ✅     | Euler’s number (≈2.71828)             |
@@ -16,6 +17,7 @@ nav_order: 14
 | math.rphi | ✅     | Reciprocal of golden ratio (≈0.61803) |
 
 ### Basic Operations
+
 | Function                | Status | Description                    |
 |-------------------------|--------|--------------------------------|
 | math.abs()              | ✅     | Absolute value                 |
@@ -26,6 +28,7 @@ nav_order: 14
 | math.sign()             | ✅     | Sign of a number (-1, 0, or 1) |
 
 ### Trigonometric
+
 | Function    | Status | Description                   |
 |-------------|--------|-------------------------------|
 | math.acos() | ✅     | Arc cosine (inverse cosine)   |
@@ -36,6 +39,7 @@ nav_order: 14
 | math.tan()  | ✅     | Tangent                       |
 
 ### Statistical
+
 | Function   | Status | Description                    |
 |------------|--------|--------------------------------|
 | math.avg() | ✅     | Average of all arguments       |
@@ -44,6 +48,7 @@ nav_order: 14
 | math.sum() | ✅     | Sum of all arguments           |
 
 ### Exponential & Logarithmic
+
 | Function     | Status | Description                    |
 |--------------|--------|--------------------------------|
 | math.exp()   | ✅     | Exponential function (e^x)     |
@@ -53,6 +58,7 @@ nav_order: 14
 | math.sqrt()  | ✅     | Square root                    |
 
 ### Utilities
+
 | Function         | Status | Description                |
 |------------------|--------|----------------------------|
 | math.random()    | ✅     | Random number generator    |

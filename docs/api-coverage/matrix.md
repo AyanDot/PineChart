@@ -8,6 +8,7 @@ nav_order: 15
 ## Matrix
 
 ### Modification
+
 | Function              | Status |
 |-----------------------|--------|
 | matrix.add_col()      | 🔴     |
@@ -20,6 +21,7 @@ nav_order: 15
 | matrix.swap_rows()    | 🔴     |
 
 ### Statistical
+
 | Function        | Status |
 |-----------------|--------|
 | matrix.avg()    | 🔴     |
@@ -30,6 +32,7 @@ nav_order: 15
 | matrix.sum()    | 🔴     |
 
 ### Element Access
+
 | Function     | Status |
 |--------------|--------|
 | matrix.col() | 🔴     |
@@ -38,6 +41,7 @@ nav_order: 15
 | matrix.set() | 🔴     |
 
 ### Size & Shape
+
 | Function                | Status |
 |-------------------------|--------|
 | matrix.columns()        | 🔴     |
@@ -47,6 +51,7 @@ nav_order: 15
 | matrix.submatrix()      | 🔴     |
 
 ### Operations
+
 | Function        | Status |
 |-----------------|--------|
 | matrix.concat() | 🔴     |
@@ -56,12 +61,14 @@ nav_order: 15
 | matrix.pow()    | 🔴     |
 
 ### Creation & Initialization
+
 | Function                 | Status |
 |--------------------------|--------|
 | matrix.copy()            | 🔴     |
 | matrix.new&lt;type&gt;() | 🔴     |
 
 ### Linear Algebra
+
 | Function              | Status |
 |-----------------------|--------|
 | matrix.det()          | 🔴     |
@@ -74,6 +81,7 @@ nav_order: 15
 | matrix.transpose()    | 🔴     |
 
 ### Properties
+
 | Function                  | Status |
 |---------------------------|--------|
 | matrix.is_antidiagonal()  | 🔴     |
@@ -88,6 +96,7 @@ nav_order: 15
 | matrix.is_zero()          | 🔴     |
 
 ### Sorting
+
 | Function      | Status |
 |---------------|--------|
 | matrix.sort() | 🔴     |

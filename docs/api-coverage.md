@@ -10,8 +10,6 @@ has_children: true
 
 PineChart implements **609 out of 768** Pine Script v5/v6 API functions (~79%).
 
-This page and all subsection pages are generated from `Pine API Tracker.md`.
-
 ## Legend
 
 - ✅ Fully Implemented (609)

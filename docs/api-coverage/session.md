@@ -8,6 +8,7 @@ nav_order: 21
 ## Session
 
 ### Session Flags
+
 | Function                   | Status | Description                  |
 |----------------------------|--------|------------------------------|
 | session.isfirstbar         | 🔴     | First bar of session         |
@@ -19,6 +20,7 @@ nav_order: 21
 | session.ispremarket        | 🔴     | Pre-market session           |
 
 ### Session Constants
+
 | Function         | Status | Description               |
 |------------------|--------|---------------------------|
 | session.extended | 🔴     | Extended session constant |

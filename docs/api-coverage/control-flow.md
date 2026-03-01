@@ -8,6 +8,7 @@ nav_order: 7
 ## Control Flow
 
 ### Conditional Statements
+
 | Feature | Status | Description |
 |----------|--------|-------------|
 | `if` statement | ✅ | Conditional |
@@ -20,6 +21,7 @@ nav_order: 7
 | Ternary operator `? :` | ✅ | Inline conditional |
 
 ### Loops
+
 | Feature | Status | Description |
 |----------|--------|-------------|
 | `for i = start to end` | ✅ | Range for loop |
@@ -30,6 +32,7 @@ nav_order: 7
 | `continue` | ✅ | Skip to next iteration |
 
 ### Variable Declaration
+
 | Feature | Status | Description |
 |----------|--------|-------------|
 | `var` declaration | ✅ | Persistent variable (init once) |

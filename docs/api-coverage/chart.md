@@ -8,12 +8,14 @@ nav_order: 5
 ## Chart
 
 ### Chart Properties
+
 | Function       | Status | Description      |
 |----------------|--------|------------------|
 | chart.bg_color | ✅     | Background color |
 | chart.fg_color | ✅     | Foreground color |
 
 ### Chart Type Detection
+
 | Function            | Status | Description                   |
 |---------------------|--------|-------------------------------|
 | chart.is_heikinashi | ✅     | Check if Heikin Ashi chart    |
@@ -25,6 +27,7 @@ nav_order: 5
 | chart.is_standard   | ✅     | Check if standard chart       |
 
 ### Visible Range
+
 | Function                     | Status | Description            |
 |------------------------------|--------|------------------------|
 | chart.left_visible_bar_time  | ✅     | Left visible bar time  |
@@ -32,6 +35,7 @@ nav_order: 5
 
 
 ### Other
+
 | Function                 | Status | Description             |
 |--------------------------|--------|-------------------------|
 | chart.point.copy()       | ✅     | Copy chart point        |

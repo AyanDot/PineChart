@@ -8,6 +8,7 @@ nav_order: 16
 ## Others
 
 ### Date/Time Functions
+
 | Function                 | Status |
 |--------------------------|--------|
 | dayofmonth()             | 🔴     |
@@ -25,6 +26,7 @@ nav_order: 16
 | year()                   | 🔴     |
 
 ### Draw Functions
+
 | Function    | Status |
 |-------------|--------|
 | fill()      | ✅     |
@@ -34,6 +36,7 @@ nav_order: 16
 | indicator() | ✅     |
 
 ### Alerts
+
 | Function         | Status |
 |------------------|--------|
 | alert()          | 🔴     |

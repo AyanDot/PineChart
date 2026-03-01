@@ -8,6 +8,7 @@ nav_order: 26
 ## Types
 
 ### Dayofweek
+
 | Function            | Status | Description |
 |---------------------|--------|-------------|
 | dayofweek.friday    | ✅     | Friday (6)  |
@@ -19,6 +20,7 @@ nav_order: 26
 | dayofweek.wednesday | ✅     | Wednesday (4)|
 
 ### Barmerge
+
 | Function               | Status | Description                          |
 |------------------------|--------|--------------------------------------|
 | barmerge.gaps_off      | ✅     | Fill gaps with last value (default)  |
@@ -27,6 +29,7 @@ nav_order: 26
 | barmerge.lookahead_on  | ✅     | Use current (incomplete) bar         |
 
 ### Display
+
 | Function              | Status | Description              |
 |-----------------------|--------|--------------------------|
 | display.all           | ✅     | Display all              |
@@ -38,6 +41,7 @@ nav_order: 26
 | display.status_line   | ✅     | Display in status line   |
 
 ### Extend
+
 | Function     | Status | Description  |
 |--------------|--------|--------------|
 | extend.both  | ✅     | Extend both  |
@@ -46,12 +50,14 @@ nav_order: 26
 | extend.right | ✅     | Extend right |
 
 ### Font
+
 | Function              | Status | Description           |
 |-----------------------|--------|-----------------------|
 | font.family_default   | ✅     | Default font family   |
 | font.family_monospace | ✅     | Monospace font family |
 
 ### Format
+
 | Function       | Status | Description    |
 |----------------|--------|----------------|
 | format.inherit | ✅     | Inherit format |
@@ -61,6 +67,7 @@ nav_order: 26
 | format.volume  | ✅     | Volume format  |
 
 ### Hline
+
 | Function           | Status | Description                  |
 |--------------------|--------|------------------------------|
 | hline.style_dashed | ✅     | Dashed horizontal line style |
@@ -68,6 +75,7 @@ nav_order: 26
 | hline.style_solid  | ✅     | Solid horizontal line style  |
 
 ### Location
+
 | Function          | Status | Description        |
 |-------------------|--------|--------------------|
 | location.abovebar | ✅     | Above bar location |
@@ -77,12 +85,14 @@ nav_order: 26
 | location.top      | ✅     | Top location       |
 
 ### Order
+
 | Function         | Status | Description      |
 |------------------|--------|------------------|
 | order.ascending  | ✅     | Ascending order  |
 | order.descending | ✅     | Descending order |
 
 ### Plot
+
 | Function                    | Status | Description                 |
 |-----------------------------|--------|-----------------------------|
 | plot.linestyle_dashed       | 🔴     | Dashed line style           |
@@ -101,6 +111,7 @@ nav_order: 26
 | plot.style_steplinebr       | 🔴     | Stepline break plot style   |
 
 ### Position
+
 | Function               | Status | Description            |
 |------------------------|--------|------------------------|
 | position.bottom_center | ✅     | Bottom center position |
@@ -114,6 +125,7 @@ nav_order: 26
 | position.top_right     | ✅     | Top right position     |
 
 ### Scale
+
 | Function    | Status | Description |
 |-------------|--------|-------------|
 | scale.left  | ✅     | Left scale  |
@@ -121,6 +133,7 @@ nav_order: 26
 | scale.right | ✅     | Right scale |
 
 ### Settlement_as_close
+
 | Function                    | Status | Description                 |
 |-----------------------------|--------|-----------------------------|
 | settlement_as_close.inherit | 🔴     | Inherit settlement as close |
@@ -128,6 +141,7 @@ nav_order: 26
 | settlement_as_close.on      | 🔴     | Settlement as close on      |
 
 ### Shape
+
 | Function           | Status | Description         |
 |--------------------|--------|---------------------|
 | shape.arrowdown    | ✅     | Arrow down shape    |
@@ -144,6 +158,7 @@ nav_order: 26
 | shape.xcross       | ✅     | X-cross shape       |
 
 ### Size
+
 | Function    | Status | Description |
 |-------------|--------|-------------|
 | size.auto   | ✅     | Auto size   |
@@ -154,12 +169,14 @@ nav_order: 26
 | size.tiny   | ✅     | Tiny size   |
 
 ### Splits
+
 | Function           | Status | Description       |
 |--------------------|--------|-------------------|
 | splits.denominator | 🔴     | Split denominator |
 | splits.numerator   | 🔴     | Split numerator   |
 
 ### Text
+
 | Function           | Status | Description           |
 |--------------------|--------|-----------------------|
 | text.align_bottom  | ✅     | Bottom text alignment |
@@ -174,12 +191,14 @@ nav_order: 26
 | text.wrap_none     | ✅     | No text wrap          |
 
 ### Xloc
+
 | Function       | Status | Description          |
 |----------------|--------|----------------------|
 | xloc.bar_index | ✅     | Bar index x-location |
 | xloc.bar_time  | ✅     | Bar time x-location  |
 
 ### Yloc
+
 | Function      | Status | Description          |
 |---------------|--------|----------------------|
 | yloc.abovebar | ✅     | Above bar y-location |
@@ -187,6 +206,7 @@ nav_order: 26
 | yloc.price    | ✅     | Price y-location     |
 
 ### Alerts
+
 | Function                      | Status | Description                        |
 |-------------------------------|--------|------------------------------------|
 | alert.freq_all                | ✅     | Alert frequency all                |
@@ -194,6 +214,7 @@ nav_order: 26
 | alert.freq_once_per_bar_close | ✅     | Alert frequency once per bar close |
 
 ### Backadjustment
+
 | Function               | Status | Description            |
 |------------------------|--------|------------------------|
 | backadjustment.inherit | 🔴     | Inherit backadjustment |
@@ -201,6 +222,7 @@ nav_order: 26
 | backadjustment.on      | 🔴     | Backadjustment on      |
 
 ### Barmerge
+
 | Function               | Status | Description   |
 |------------------------|--------|---------------|
 | barmerge.gaps_off      | ✅     | Gaps off      |

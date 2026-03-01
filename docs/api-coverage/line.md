@@ -8,6 +8,7 @@ nav_order: 10
 ## Line
 
 ### Styles
+
 | Function               | Status | Description       |
 |------------------------|--------|-------------------|
 | line.style_arrow_both  | ✅     | Arrow both style  |
@@ -19,6 +20,7 @@ nav_order: 10
 
 
 ### Management
+
 | Function      | Status | Description          |
 |---------------|--------|----------------------|
 | line.all      | ✅     | All lines collection |
@@ -29,6 +31,7 @@ nav_order: 10
 
 
 ### Getters
+
 | Function         | Status | Description       |
 |------------------|--------|-------------------|
 | line.get_price() | ✅     | Get interpolated price at x |
@@ -39,6 +42,7 @@ nav_order: 10
 
 
 ### Setters
+
 | Function                | Status | Description         |
 |-------------------------|--------|---------------------|
 | line.set_color()        | ✅     | Set line color      |

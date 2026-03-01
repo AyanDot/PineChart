@@ -8,6 +8,7 @@ nav_order: 23
 ## Table
 
 ### Cell Operations
+
 | Function                          | Status | Description                    |
 |-----------------------------------|--------|--------------------------------|
 | table.cell()                      | ✅     | Set cell content               |
@@ -25,6 +26,7 @@ nav_order: 23
 | table.merge_cells()               | 🔵     | Merge cells                    |
 
 ### Management
+
 | Function       | Status | Description           |
 |----------------|--------|-----------------------|
 | table()        | ✅     | Casts na to table     |
@@ -34,6 +36,7 @@ nav_order: 23
 | table.new()    | ✅     | Create new table      |
 
 ### Table Settings
+
 | Function                 | Status | Description          |
 |--------------------------|--------|----------------------|
 | table.set_bgcolor()      | ✅     | Set background color |

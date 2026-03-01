@@ -8,6 +8,7 @@ nav_order: 24
 ## Technical Analysis
 
 ### Moving Averages
+
 | Function    | Status | Description                              |
 |-------------|--------|------------------------------------------|
 | ta.vwap     | ✅     | Volume Weighted Average Price (variable) |
@@ -23,6 +24,7 @@ nav_order: 24
 | ta.wma()    | ✅     | Weighted Moving Average                  |
 
 ### Oscillators & Momentum
+
 | Function    | Status | Description                           |
 |-------------|--------|---------------------------------------|
 | ta.cci()    | ✅     | Commodity Channel Index               |
@@ -39,6 +41,7 @@ nav_order: 24
 | ta.wpr()    | ✅     | Williams %R                           |
 
 ### Volatility & Range
+
 | Function      | Status | Description             |
 |---------------|--------|-------------------------|
 | ta.tr         | ✅     | True Range (variable)   |
@@ -54,6 +57,7 @@ nav_order: 24
 | ta.variance() | ✅     | Variance                |
 
 ### Volume Indicators
+
 | Function   | Status | Description                                            |
 |------------|--------|--------------------------------------------------------|
 | ta.accdist | ✅     | Accumulation/Distribution (variable)                   |
@@ -66,6 +70,7 @@ nav_order: 24
 | ta.wvad    | ✅     | Williams Variable Accumulation/Distribution (variable) |
 
 ### Utility Functions
+
 | Function       | Status | Description              |
 |----------------|--------|--------------------------|
 | ta.barssince() | ✅     | Bars Since Condition     |
@@ -74,6 +79,7 @@ nav_order: 24
 | ta.valuewhen() | ✅     | Value When Condition Met |
 
 ### Statistical Functions
+
 | Function                             | Status | Description               |
 |--------------------------------------|--------|---------------------------|
 | ta.correlation()                     | ✅     | Correlation Coefficient   |
@@ -90,6 +96,7 @@ nav_order: 24
 | ta.percentrank()                     | ✅     | Percentile Rank           |
 
 ### Trend Analysis
+
 | Function        | Status | Description                        |
 |-----------------|--------|------------------------------------|
 | ta.cross()      | ✅     | Cross Detection (either direction) |
@@ -102,6 +109,7 @@ nav_order: 24
 | ta.supertrend() | ✅     | SuperTrend Indicator               |
 
 ### Support & Resistance
+
 | Function                | Status | Description          |
 |-------------------------|--------|----------------------|
 | ta.pivot_point_levels() | ✅     | Pivot Point Levels   |
