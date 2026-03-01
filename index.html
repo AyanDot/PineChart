@@ -168,16 +168,18 @@
         <img src="logo3.1.png" alt="PineChart logo" width="44" height="44">
         <span>PineChart</span>
       </a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#how-to-run">How It Works</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#api-coverage">API Coverage</a></li>
-        <li><a href="#comparison">Comparison</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="docs/">Docs</a></li>
-        <li><a href="https://www.mql5.com/en/market/product/164682" class="nav-cta">Get PineChart</a></li>
-        <li><a href="demo.html" class="nav-cta" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12);">Get Demo</a></li>
-      </ul>
+      <div class="nav-menu" id="navLinks">
+        <ul class="nav-links">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#comparison">Comparison</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="docs/">Docs</a></li>
+        </ul>
+        <ul class="nav-actions">
+          <li><a href="demo.html" class="nav-cta nav-cta-secondary">Get Demo</a></li>
+          <li><a href="https://www.mql5.com/en/market/product/164682" class="nav-cta">Get PineChart</a></li>
+        </ul>
+      </div>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
     </div>
   </nav>
@@ -533,12 +535,11 @@
     <hr class="section-divider">
 
     <!-- ===== PineChart vs Manual MQL5 Conversion ===== -->
-    <section id="comparison" aria-label="PineChart vs manual MQL5 conversion">
+    <section id="comparison" aria-label="PineChart vs common alternatives">
       <div class="container">
         <header class="section-header reveal">
-          <h2>PineChart vs Manual MQL5 Conversion</h2>
-          <p>See why traders choose PineChart to run Pine Script in MT5 instead of manually rewriting code into MQL5.
-            Every Pine Script indicator in MT5 is just a file drop away.</p>
+          <h2>PineChart vs Common Alternatives</h2>
+          <p>See why traders choose PineChart instead of webhook-only automations or one-off freelance ports.</p>
         </header>
 
         <div class="comparison-table-wrapper reveal-scale">
@@ -547,63 +548,63 @@
               <tr>
                 <th>Feature</th>
                 <th class="highlight">PineChart</th>
-                <th>Manual MQL5 Port</th>
+                <th>Webhook Automation</th>
                 <th>Freelance Developer</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Setup time</td>
+                <td>Setup Time</td>
                 <td class="highlight"><span class="check">✓</span> Minutes</td>
-                <td><span class="cross">✗</span> Days to weeks</td>
-                <td><span class="partial">~</span> Days + communication</td>
+                <td><span class="partial">~</span> Hours+</td>
+                <td><span class="partial">~</span> Days+</td>
               </tr>
               <tr>
-                <td>MQL5 knowledge required</td>
-                <td class="highlight"><span class="check">✓</span> None</td>
-                <td><span class="cross">✗</span> Expert level</td>
-                <td><span class="check">✓</span> None (developer handles)</td>
+                <td>Technical Skill Required</td>
+                <td class="highlight"><span class="check">✓</span> Low</td>
+                <td><span class="cross">✗</span> High</td>
+                <td><span class="partial">~</span> Medium</td>
               </tr>
               <tr>
                 <td>Works with any Pine Script</td>
-                <td class="highlight"><span class="partial">~</span> 79% API (growing)</td>
-                <td><span class="check">✓</span> Full (if skilled)</td>
-                <td><span class="check">✓</span> Depends on developer</td>
+                <td class="highlight"><span class="check">✓</span> Yes, API Coverage ~79%</td>
+                <td><span class="cross">✗</span> Alerts only</td>
+                <td><span class="partial">~</span> Varies</td>
               </tr>
               <tr>
-                <td>Update when script changes</td>
+                <td>Update When Script Changes</td>
                 <td class="highlight"><span class="check">✓</span> Replace file, done</td>
-                <td><span class="cross">✗</span> Re-port everything</td>
+                <td><span class="cross">✗</span> Rebuild logic</td>
                 <td><span class="cross">✗</span> Pay again</td>
               </tr>
               <tr>
-                <td>Multiple indicators</td>
-                <td class="highlight"><span class="check">✓</span> Unlimited, comma-separated</td>
-                <td><span class="cross">✗</span> One EA per indicator</td>
-                <td><span class="cross">✗</span> Pay per indicator</td>
+                <td>Multiple Indicators or Strategies</td>
+                <td class="highlight"><span class="check">✓</span> Unlimited, in one workflow</td>
+                <td><span class="cross">✗</span> Limited</td>
+                <td><span class="partial">~</span> Custom scope</td>
               </tr>
               <tr>
                 <td>Modern charting UI</td>
                 <td class="highlight"><span class="check">✓</span> TradingView-style</td>
-                <td><span class="cross">✗</span> Default MT5 chart</td>
-                <td><span class="cross">✗</span> Default MT5 chart</td>
+                <td><span class="cross">✗</span> No native UI</td>
+                <td><span class="cross">✗</span> Usually MT5 UI</td>
               </tr>
               <tr>
                 <td>Strategy backtesting</td>
                 <td class="highlight"><span class="check">✓</span> MT5 Strategy Tester</td>
-                <td><span class="check">✓</span> MT5 Strategy Tester</td>
-                <td><span class="check">✓</span> MT5 Strategy Tester</td>
+                <td><span class="cross">✗</span> No native flow</td>
+                <td><span class="partial">~</span> Depends</td>
               </tr>
               <tr>
                 <td>Ongoing cost</td>
                 <td class="highlight"><span class="check">✓</span> One-time purchase</td>
-                <td><span class="check">✓</span> Free (your time)</td>
-                <td><span class="cross">✗</span> Per-project fee</td>
+                <td><span class="cross">✗</span> Recurring stack costs</td>
+                <td><span class="cross">✗</span> Project/revision fees</td>
               </tr>
               <tr>
                 <td>Works with any MT5 broker</td>
                 <td class="highlight"><span class="check">✓</span> Yes</td>
-                <td><span class="check">✓</span> Yes</td>
+                <td><span class="partial">~</span> Bridge-dependent</td>
                 <td><span class="check">✓</span> Yes</td>
               </tr>
             </tbody>
