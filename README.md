@@ -42,17 +42,6 @@
 
 **609 / 768** total Pine Script v5/v6 functions implemented (~79%).
 
-## Website
-
-This repository contains the static landing page for PineChart, built with pure HTML, CSS, and JavaScript. No build step required.
-
-```
-index.html   — Semantic HTML with JSON-LD structured data
-style.css    — Dark premium theme, glassmorphism, responsive
-main.js      — Scroll animations, animated counters, FAQ accordion
-logo3.1.png  — Product logo
-```
-
-## 📄 License
+## License
 
 All rights reserved. PineChart is a commercial product available on the [MQL5 Marketplace](https://www.mql5.com/en/market/product/164682).

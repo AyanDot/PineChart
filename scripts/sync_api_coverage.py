@@ -292,7 +292,7 @@ def render_parent(metrics: Dict[str, str], specs: Sequence[SectionSpec]) -> str:
         lines.append("")
         for slug in slugs:
             spec = specs_by_slug[slug]
-            lines.append(f"- [{spec.title}](./api-coverage/{spec.slug}.md)")
+            lines.append(f"- [{spec.title}]({{% link docs/api-coverage/{spec.slug}.md %}})")
         lines.append("")
     return "\n".join(lines)
 

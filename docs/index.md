@@ -21,7 +21,7 @@ PineChart currently implements **609 out of 768** Pine Script v5/v6 API function
 |:--------|:------------|
 | [Getting Started](getting-started) | Install PineChart and run your first Pine Script indicator in MT5 |
 | [Architecture](architecture) | How the Pine Script engine works under the hood |
-| [API Coverage](api-coverage) | Full function-by-function implementation status |
+| [API Coverage]({% link docs/api-coverage.md %}) | Full function-by-function implementation status |
 | [Known Quirks](quirks) | Limitations and behaviors to be aware of |
 
 ---

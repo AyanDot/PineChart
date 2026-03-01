@@ -80,7 +80,7 @@ These are inherent to the MQL5 environment, not PineChart-specific:
 
 ## Not Yet Implemented (Major Categories)
 
-For the full function-by-function status, see the [API Coverage](api-coverage) page. Major missing categories include:
+For the full function-by-function status, see the [API Coverage]({% link docs/api-coverage.md %}) page. Major missing categories include:
 
 - **Map** — `map.*` (11 functions)
 - **Matrix** — `matrix.*` (40+ functions)
