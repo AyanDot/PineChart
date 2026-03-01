@@ -1033,18 +1033,19 @@ section {
     font-size: 0.85rem;
 }
 
-.footer-links {
-    display: flex;
-    gap: var(--space-xl);
-    list-style: none;
-}
-
-.footer-links a {
+.footer-enterprise {
     color: var(--text-secondary);
     font-size: 0.85rem;
 }
 
-.footer-links a:hover {
+.footer-enterprise a {
+    color: var(--text-secondary);
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.25);
+    text-underline-offset: 2px;
+}
+
+.footer-enterprise a:hover {
     color: var(--text-heading);
 }
 
@@ -1136,4 +1137,5 @@ section {
         flex-direction: column;
         align-items: center;
     }
+
 }

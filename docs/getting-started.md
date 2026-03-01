@@ -95,3 +95,4 @@ PineChart's lexer tokenizes, parser builds the AST, and the interpreter executes
 - Check the [API Coverage]({% link docs/api-coverage.md %}) page to see which functions your script uses
 - Review [Known Quirks](quirks) for important limitations
 - Read the [Architecture](architecture) overview to understand how the engine works
+- Visit [Support & Contact](support-contact) if you need help or want to report a bug
