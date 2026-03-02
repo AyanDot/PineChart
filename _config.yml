@@ -16,6 +16,7 @@ search.heading_level: 3
 nav_sort: case_insensitive
 
 heading_anchors: true
+favicon_ico: "/logo3.1.png"
 
 exclude:
   - node_modules/
