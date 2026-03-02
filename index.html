@@ -509,24 +509,21 @@
 
     <hr class="section-divider">
 
-    <!-- ===== Pine Script in MT5 vs TradingView ===== -->
-    <section class="platform-section" id="mt5-vs-tradingview" aria-label="Pine Script in MT5 vs TradingView">
+    <!-- ===== PineChart vs Common Workflows ===== -->
+    <section class="platform-section" id="mt5-vs-tradingview" aria-label="PineChart vs webhooks, freelancers, and manual conversion">
       <div class="container">
         <header class="section-header reveal">
-          <h2>Pine Script in MT5 vs TradingView</h2>
+          <h2>PineChart vs Webhooks & Freelancers</h2>
         </header>
         <div class="platform-body reveal">
           <p>
-            TradingView is a web-based charting platform where Pine Script runs natively — but it's a separate ecosystem
-            from your broker's trading terminal.
-            MetaTrader 5 is the standalone trading terminal used by the majority of forex and CFD brokers worldwide and
-            does not support Pine Script out of the box.
-            This means traders who want to use their favourite Pine Script indicators for live trading in MT5 have
-            traditionally had to manually rewrite every script in MQL5 — a completely different language.
-            PineChart bridges that gap by providing a full Pine Script interpreter that runs directly inside MetaTrader
-            5, so you can use the same indicator source code on both platforms.
-            There's no need to maintain two separate codebases or switch between platforms.
-            If you want to run Pine Script in MetaTrader 5 without learning MQL5, PineChart is the solution.
+            If you want to run Pine Script in MetaTrader 5, the usual alternatives are webhook automations, freelance
+            MQL5 ports, or manual rewrites.
+            Webhooks can relay alerts, but they do not run full Pine Script logic natively inside MT5 charts.
+            Freelance or manual conversions can work, but they take longer, cost more over time, and often require
+            rework whenever the original script changes.
+            PineChart takes a different approach: it runs Pine Script directly in MT5 through an in-platform interpreter,
+            so you can keep a faster file-drop workflow while staying close to your TradingView script behavior.
           </p>
         </div>
       </div>
@@ -556,12 +553,12 @@
               <tr>
                 <td>Setup Time</td>
                 <td class="highlight"><span class="check">✓</span> Minutes</td>
-                <td><span class="partial">~</span> Hours+</td>
-                <td><span class="partial">~</span> Days+</td>
+                <td><span class="partial">~</span> Hours to Days</td>
+                <td><span class="partial">~</span> Days to Weeks</td>
               </tr>
               <tr>
                 <td>Technical Skill Required</td>
-                <td class="highlight"><span class="check">✓</span> Low</td>
+                <td class="highlight"><span class="check">✓</span> None</td>
                 <td><span class="cross">✗</span> High</td>
                 <td><span class="partial">~</span> Medium</td>
               </tr>
@@ -593,12 +590,12 @@
                 <td>Strategy backtesting</td>
                 <td class="highlight"><span class="check">✓</span> MT5 Strategy Tester</td>
                 <td><span class="cross">✗</span> No native flow</td>
-                <td><span class="partial">~</span> Depends</td>
+                <td><span class="check">✓</span> MT5 Strategy Tester</td>
               </tr>
               <tr>
                 <td>Ongoing cost</td>
                 <td class="highlight"><span class="check">✓</span> One-time purchase</td>
-                <td><span class="cross">✗</span> Recurring stack costs</td>
+                <td><span class="cross">✗</span> Monthly Subscription</td>
                 <td><span class="cross">✗</span> Project/revision fees</td>
               </tr>
               <tr>
