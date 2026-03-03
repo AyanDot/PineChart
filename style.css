@@ -231,9 +231,23 @@ img {
     color: var(--text-heading);
 }
 
+.nav-logo:hover {
+    color: var(--text-heading);
+}
+
+.nav-logo span {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .nav-logo img {
-    height: 38px;
-    width: auto;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    transform: scale(1.12);
+    transform-origin: center;
     border-radius: 0;
 }
 
