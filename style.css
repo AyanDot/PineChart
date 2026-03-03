@@ -23,15 +23,15 @@
     /* Accents */
     --accent-blue: #3b82f6;
     --accent-purple: #8b5cf6;
-    --accent-teal: #14b8a6;
-    --accent-green: #22c55e;
+    --accent-teal: #38bdf8;
+    --accent-green: #38bdf8;
     --accent-orange: #f97316;
 
     /* Gradients */
     --gradient-hero: linear-gradient(135deg, #0a0a1a 0%, #1a0a3a 40%, #0a1a2a 100%);
     --gradient-accent: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
-    --gradient-accent2: linear-gradient(135deg, var(--accent-teal), var(--accent-blue));
-    --gradient-text: linear-gradient(135deg, #60a5fa, #a78bfa, #34d399);
+    --gradient-accent2: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
+    --gradient-text: linear-gradient(135deg, #38bdf8, #a78bfa, #93c5fd);
     --gradient-glow: radial-gradient(ellipse 600px 400px at 50% 0%, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
 
     /* Borders */
