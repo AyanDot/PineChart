@@ -14,14 +14,14 @@ nav_order: 1
 | array.copy()            | ✅      | Create copy of array         |
 | array.from()            | ✅      | Create array from arguments  |
 | array.new_bool()        | ✅      | Create boolean array         |
-| array.new_box()         | 🔵      | Create box array             |
-| array.new_color()       | 🔵      | Create color array           |
+| array.new_box()         | ✅      | Create box array             |
+| array.new_color()       | ✅      | Create color array           |
 | array.new_float()       | ✅      | Create float array           |
 | array.new_int()         | ✅      | Create int array             |
-| array.new_label()       | 🔵      | Create label array           |
-| array.new_line()        | 🔵      | Create line array            |
+| array.new_label()       | ✅      | Create label array           |
+| array.new_line()        | ✅      | Create line array            |
 | array.new_linefill()    | 🔵      | Create linefill array        |
-| array.new_string()      | 🔵      | Create string array          |
+| array.new_string()      | ✅      | Create string array          |
 | array.new_table()       | 🔵      | Create table array           |
 | array.new&lt;type&gt;() | 🔵      | Create typed array (generic) |
 

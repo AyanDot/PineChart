@@ -8,14 +8,14 @@ has_children: true
 
 # Pine Script API Coverage
 
-PineChart implements **609 out of 768** Pine Script v5/v6 API functions (~79%).
+PineChart implements **614 out of 768** Pine Script v5/v6 API functions (~80%).
 
 ## Legend
 
-- ✅ Fully Implemented (609)
+- ✅ Fully Implemented (614)
 - 🟡 Partially Implemented (1)
 - 🔴 Not Implemented (116)
-- 🔵 Planned Next (42)
+- 🔵 Planned Next (37)
 - ⚪ Low Priority (0)
 
 ## Core Namespaces
